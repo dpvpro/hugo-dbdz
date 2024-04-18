@@ -12,7 +12,7 @@ tags:
   - "modules"
 ---
 
-Golang по умолчанию работает с `https` протколом. Поэтому с настройками по умолчанию возникает ошибка ниже.
+Golang по умолчанию работает с `https` протколом. Поэтому с настройками по умолчанию возникает ошибка ниже:
 
 ```
 go: gitlab.space.team/dev/spacevm-go@v0.0.0-20230427205557-c59c016940d9: invalid version: git ls-remote -q origin in 
@@ -21,6 +21,8 @@ go: gitlab.space.team/dev/spacevm-go@v0.0.0-20230427205557-c59c016940d9: invalid
 	terminal prompts disabled Confirm the import path was entered correctly.
 If this is a private repository, see https://golang.org/doc/faq#git_https for additional information.
 ```
+
+<!--more-->
 
 Что бы заставить его использовать `http` при работе частными репозиториями неободимо прописать авторизацию через файл `$HOME/.netrc`
 
