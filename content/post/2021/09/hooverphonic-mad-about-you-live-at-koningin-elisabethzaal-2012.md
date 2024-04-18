@@ -1,7 +1,9 @@
 ---
 title: "Hooverphonic - Mad About You (Live at Koningin Elisabethzaal 2012)"
 date: "2021-09-17"
-categories: 
+categories:
+  - "video" 
+tags: 
   - "music"
 ---
 <!--more-->
