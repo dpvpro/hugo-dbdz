@@ -76,7 +76,10 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   author = "Denis Proskurin"
 
   # This text appears in the site header under website title
-  subtitle = "Some Code, Troubleshooting, Good Links"
+  subtitle = "Open source, Some Code, Troubleshooting, Good Links"
+
+  # Website's default description
+  description = "Open source, Some Code, Troubleshooting, Good Links"
 
   # Search engine URL
   searchEngineURL = "https://www.google.com/search"
@@ -96,9 +99,6 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   # Set to true to use a text label for RSS instead of an icon
   # This is overwritten by the "rss" setting
   textrss = false
-
-  # Website's default description
-  description = "Troubleshooting, Good Links, And Some Code"
 
   # Populate this with your own search keywords - these will appear in the meta tags
   # defaultKeywords = ["keyword1" , "keyword2" , "keyword3" , "keyword4"]
@@ -195,14 +195,19 @@ URL = "/resume/"
 weight = 3
 
 [[menu.main]]
+  Name = "Sample"
+  URL = "/sample/"
+  weight = 4
+
+[[menu.main]]
   Name = "About"
   URL = "/about/"
-  weight = 4
+  weight = 5
 
 # [[menu.main]]
 #   Name = "This theme on Github"
 #   URL = "https://www.github.com/parsiya/hugo-octopress"
-#   weight = 5
+#   weight = 6
 
 
 
