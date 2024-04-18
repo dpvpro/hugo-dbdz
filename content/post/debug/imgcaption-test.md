@@ -12,7 +12,6 @@ tags:
 - imgcap
 - windows
 ---
-
 Markdown image:
 
 ![](/hugoshell/images/windows.png)
