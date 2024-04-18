@@ -1,0 +1,17 @@
+---
+title: "Nina Kraviz Boiler Room Berlin DJ Set"
+date: "2015-08-20"
+categories: 
+  - "video"
+tags: 
+  - "music"
+  - "boiler room"
+  - "nina kraviz"
+---
+
+Много раз переслушивал и пересматривал этот сет. Не знаю почему, но очень нравится. Был удивлён когда узнал что она из России )
+
+<!--more-->
+{{< youtube "xogJgUteDAs" >}}
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xogJgUteDAs" frameborder="0" allowfullscreen></iframe> -->
