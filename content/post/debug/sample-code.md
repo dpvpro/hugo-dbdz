@@ -1,5 +1,5 @@
 +++
-title = 'Sample code'
+title = 'Пример кода на golang'
 description = "Sample code stuff"
 date = 2023-12-04T10:54:48+03:00
 +++
