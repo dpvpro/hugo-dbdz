@@ -1,7 +1,7 @@
 +++
 title = 'Маяковский - Вам!'
 date = "2024-04-17T03:12:12+03:00"
-categories = ["other"]
+categories = ["lirycs"]
 tags = ["lyrics"]
 +++
 

@@ -3,7 +3,7 @@ title = 'Редьярд Киплинг - «Серые глаза - рассве�
 date = "2024-04-17T05:00:33+03:00"
 draft = false
 
-categories = ["other"]
+categories = ["lirycs"]
 tags = ["lyrics"]
 
 +++
