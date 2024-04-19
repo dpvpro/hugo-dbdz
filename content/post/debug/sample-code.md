@@ -2,6 +2,7 @@
 title = 'Пример кода на Golang'
 description = "Sample code stuff"
 date = 2023-12-04T10:54:48+03:00
+draft = true
 +++
 Here is some content. This is all in Markdown.
 

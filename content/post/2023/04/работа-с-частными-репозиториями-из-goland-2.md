@@ -13,7 +13,7 @@ tags:
 ---
 Golang по умолчанию работает с `https` протколом. Поэтому с настройками по умолчанию возникает ошибка ниже:
 
-```
+```go
 go: gitlab.space.team/dev/spacevm-go@v0.0.0-20230427205557-c59c016940d9: invalid version: git ls-remote -q origin in 
 /home/dp/Code/golang/go/pkg/mod/cache/vcs/9d6ac92dae2cb8c34a30234f55abdae32ec5751ebe1104a5d00259017d7295a9: exit status 128:
 	fatal: could not read Username for 'http://gitlab.space.team':
@@ -25,13 +25,13 @@ If this is a private repository, see https://golang.org/doc/faq#git_https for ad
 
 Что бы заставить его использовать `http` при работе частными репозиториями неободимо прописать авторизацию через файл `$HOME/.netrc`
 
-```
+```bash
 machine gitlab.space.team login USERNAME password PASSWORD(APIKEY)
 ```
 
 При возникновении следующей ошибки:
 
-```
+```go
 go: terraform-provider-spacevm imports
 	gitlab.space.team/dev/spacevm-go/api: gitlab.space.team/dev/spacevm-go@v0.0.0-20230302093536-f65e5b53e820: parsing go.mod:
 	module declares its path as: spacevm-go

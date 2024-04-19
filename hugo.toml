@@ -18,12 +18,9 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   # set the Chroma highlighting options
   # https://gohugo.io/getting-started/configuration-markup/#highlight
   [markup.highlight]
-    style = "solarized-dark"
-  # if you want to keep using Blackfriday
-  # defaultMarkdownHandler = "blackfriday"
-  #   [markup.blackFriday]
-  #     hrefTargetBlank = true # open links in a new tab
-
+  # style = "solarized-dark"
+  # style = "tango"
+    style = "catppuccin-latte"
 
 
 [params]

@@ -2,6 +2,7 @@
 title = 'Hello World'
 description = "World stuff"
 date = 2023-12-02T08:50:19+03:00
+draft = true
 +++
 __Advertisement :)__
 

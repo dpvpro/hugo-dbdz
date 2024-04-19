@@ -23,7 +23,7 @@ tags:
 
 При попытке импорта, **Goland** пишет:
 
-```
+```go
 go: finding module for package gitlab.bazalt.team/dev/veil-api-client-go/veil
 terraform-provider-veil imports
 gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing package gitlab.bazalt.team/dev/veil-api-client-go/veil: unrecognized import path "gitlab.bazalt.team/dev/veil-api-client-go/veil": https fetch: Get "https://gitlab.bazalt.team/dev/veil-api-client-go/veil?go-get=1": dial tcp 192.168.14.215:443: connect: connection refused
@@ -33,7 +33,7 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 * запилил самоподписанные сертфикаты для **Gitlab**, не помогло:
 
-```
+```go
 go: finding module for package gitlab.bazalt.team/dev/veil-api-client-go/veil
 terraform-provider-veil/veil imports
 gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing package gitlab.bazalt.team/dev/veil-api-client-go/veil: unrecognized import path "gitlab.bazalt.team/dev/veil-api-client-go/veil": https fetch: Get "https://gitlab.bazalt.team/dev/veil-api-client-go/veil?go-get=1": x509: certificate signed by unknown authority
@@ -42,13 +42,13 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 * экспериментировал с `git` на локальном хосте как [здесь](https://stackoverflow.com/questions/29707689/how-to-use-go-with-a-private-gitlab-repo), не помогло:
 
-* поспал, начал читать разное про модули, в итоге набрел на ["Go Modules Reference"](https://go.dev/ref/mod#environment-variables), помогло:
+* поспал, начал читать разное про модули, в итоге набрел на ["Go Modules Reference"](https://go.dev/ref/mod#environment-variables), помогло...
 
 В настройках проекта Goland устанавливаем переменные с исключениями из внутренних серверов и удаляем старые версии модулей в консоли:
 
 ![](/hugoshell/images/2022/01/golang_settings.png)
 
-```
+```bash
 go clean -modcache
 ```
 
