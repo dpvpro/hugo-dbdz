@@ -17,17 +17,15 @@ tags:
 ```groovy
 def pR = sh(script: "cd $it; PLAN=\$(terragrunt plan --terragrunt-source-update | landscape);
                      echo "$PLAN"; CHANGES=$(echo "$PLAN" | tail -2); echo $CHANGES")
-
 ```
-
 Возникает ошибка когда идет попытка выполнить `echo "$PLAN"`:
 
 ```bash
 solution: either escape a literal dollar sign "\$5" or bracket the value 
 expression "${5}" @ line 34, column 148.
 ce-update | landscape); echo "$PLAN"; CH
-
 ```
+<!--more-->
 
 Происходит это из-за особенностей интерпретации кода в **Jenkins**. Для строк с двойными кавычками, **Groovy** процессор будет преобразовывать строку первым. И только после преобразования переменных **Groovy**, преобразованием переменных займется **Bash**.
 
