@@ -6,7 +6,7 @@ categories:
   - "network"
 tags: 
   - "dns"
-  - "network-manager"
+  - "network manager"
   - "vpn"
 ---
 После настройки openvpn клиента, блокировки Роскомнадзора все равно срабатывали.

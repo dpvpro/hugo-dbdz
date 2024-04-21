@@ -1,4 +1,4 @@
-baseurl = "https://daybydayz.ru/hugoshell"
+baseurl = "https://daybydayz.ru/"
 disablePathToLower = false
 languageCode = "en-us"
 title = "Day by Day, Site by Site"
@@ -30,26 +30,30 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   sidebarRecentLimit = 6
 
   # Sidebar header - passed to markdownify so you can write markdown here
-  sidebarHeader = "Sidebar Header"
+  sidebarHeader = "Контакты"
 
   # Sidebar text also supports markdown
   # New lines can be added with two spaces at the end of line. New paragraphs can be added with two an empty line.
   # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
   sidebarText = """
-  Here's a [link to google](https://www.google.com)
-
-  New paragraph
-
-  Another paragraph which has two spaces in the end to create a new line using markdown  
   
-  New line but not a new paragraph
+
+  Почта - dpvpro # gmail # com
+
+  Телеграмм - dpvpro
+
+  Github - https://github.com/dpvpro
+
+  Какая то [ссылка на google](https://www.google.com)
+
+
   """
   # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
   sidebarMenuEnabled = true
   sidebarMenuHeader = "Sidebar Links"
 
   # sidebar links
-  github = "https://github.com/parsiya/hugo-octopress"
+  github = "https://github.com/dpvpro"
   bitbucket = ""
   twitter = ""
   mastodon = ""
@@ -169,8 +173,8 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
 # term = ["HTML"]
 
 # Maximum number of items in the Atom & RSS feed
-# [services.rss]
-# limit = -1
+[services.rss]
+limit = -1
 
 
 # Menu

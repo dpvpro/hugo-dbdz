@@ -8,7 +8,7 @@ categories:
 tags: 
   - "jenkins"
   - "groovy"
-  - "escape-character"
+  - "escape character"
   - "bash"
   - "экранирование"
 ---

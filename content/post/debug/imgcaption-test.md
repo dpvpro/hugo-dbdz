@@ -14,7 +14,7 @@ tags:
 ---
 Markdown image:
 
-![](/hugoshell/images/windows.png)
+![](/images/windows.png)
 
 More stuff after image.
 

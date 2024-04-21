@@ -19,7 +19,7 @@ tags:
 Во множестве организаций использутся внутренние репозитории кода. У нас код хостится на внутреннем сервере **Gitlab**.
 При этом `https` не используется, используется `http`. При импорте модулей в пакет при разработке на **Golang** возникает проблема:
 
-![](/hugoshell/images/2022/01/golang_https1.png)
+![](/images/2022/01/golang_https1.png)
 
 При попытке импорта, **Goland** пишет:
 
@@ -46,7 +46,7 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 В настройках проекта Goland устанавливаем переменные с исключениями из внутренних серверов и удаляем старые версии модулей в консоли:
 
-![](/hugoshell/images/2022/01/golang_settings.png)
+![](/images/2022/01/golang_settings.png)
 
 ```bash
 go clean -modcache
@@ -54,4 +54,4 @@ go clean -modcache
 
 Может потребоваться перезапуск Goland. Модули нормально импортировались:
 
-![](/hugoshell/images/2022/01/golang_https2.png)
+![](/images/2022/01/golang_https2.png)

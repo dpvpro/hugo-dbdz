@@ -27,7 +27,7 @@ set iminsert=0
 И тогда я решил написать свою раскладку. Базовая раскладка находится в - `/usr/share/vim/vim74/keymap/russian-jcukenwin.vim`. Далее изменяем назначения клавиш на основе этого файла и называем наш файл *russian-jcukenwintype.vim*.
 
 
-[russian-jcukenwintype.zip](/hugoshell/files/2015/05/russian-jcukenwintype.zip)
+[russian-jcukenwintype.zip](/files/2015/05/russian-jcukenwintype.zip)
 
 
 Что бы не терять плоды работы, был отправлен [запрос](https://groups.google.com/forum/#!topic/vim_dev/z1M3MjOxerU) на добавление файла в дистрибутив программы.
