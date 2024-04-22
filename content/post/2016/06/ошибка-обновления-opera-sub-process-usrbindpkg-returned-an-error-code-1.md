@@ -10,6 +10,8 @@ tags:
   - "ошибка обновления"
 ---
 
+<!--more-->
+
 После установки браузера Opera на Ubuntu, при последующем обновлении, возникает ошибка `Sub-process /usr/bin/dpkg returned an error code (1)`.
 
 ```bash

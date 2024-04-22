@@ -7,4 +7,6 @@ tags:
   - "very good techno"
 ---
 
+<!--more-->
+
 https://soundcloud.com/soma/slamradio-204-iy

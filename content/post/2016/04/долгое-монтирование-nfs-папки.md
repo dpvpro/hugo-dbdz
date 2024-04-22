@@ -6,6 +6,8 @@ categories:
 tags: 
   - "nfs"
 ---
+<!--more-->
+
 Если монтирование сетевой папки NFS занимает длительное время, значит сервер не поддерживает NFS4. Нужно подключаться с использованием NFS3:
 
 `sudo mount -v -t nfs server:/path/to/share  /mnt  -o nfsvers=3`

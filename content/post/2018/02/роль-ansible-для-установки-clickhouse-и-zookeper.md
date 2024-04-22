@@ -9,6 +9,9 @@ tags:
   - "zookeper"
   - "iac"
 ---
+
+<!--more-->
+
 Копируем роль:
 
 [https://github.com/dpvpro/ansible-clickhouse-dp](https://github.com/dpvpro/ansible-clickhouse-dp)

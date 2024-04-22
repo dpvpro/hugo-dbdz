@@ -8,4 +8,6 @@ tags:
   - "libvirt"
   - "spice"
 ---
+<!--more-->
+
 https://hellsman.ru/admin/linux/reshenie-problemy-no-module-named-spiceclientgtk-v-virt-manager

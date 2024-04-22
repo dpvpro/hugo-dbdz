@@ -12,6 +12,8 @@ tags:
 
 `isc_stdio_open '/var/log/bind/misc.log' failed: permission denied`
 
+<!--more-->
+
 Проблема кроется в усиленной защите AppArmor.
 
 Для исправления разрешаем запись в файл лога в файле конфигурации AppArmor `/etc/apparmor.d/usr.sbin.named`:

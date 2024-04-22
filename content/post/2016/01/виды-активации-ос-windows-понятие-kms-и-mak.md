@@ -9,6 +9,7 @@ tags:
   - "volume license"
   - "корпоративная лицензия windows"
 ---
+<!--more-->
 
 ### Введение.
 

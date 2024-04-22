@@ -17,6 +17,8 @@ zabbix_sender [24284]: DEBUG: answer [{"response":"success","info":"processed: 0
 info from server: "processed: 0; failed: 1; total: 1; seconds spent: 0.000031"
 ```
 
+<!--more-->
+
 Тем не менее, после определенного времени, данные импортировались нормально.
 После того как начал изучать эту тему более подробно, обратил внимание что Zabbix обновляет данные раз в 10 минут.
 
