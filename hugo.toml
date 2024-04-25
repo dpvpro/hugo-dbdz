@@ -197,13 +197,13 @@ URL = "/resume/"
 weight = 3
 
 [[menu.main]]
-  Name = "Sample"
-  URL = "/sample/"
+  Name = "About"
+  URL = "/about/"
   weight = 4
 
 [[menu.main]]
-  Name = "About"
-  URL = "/about/"
+  Name = "Sample"
+  URL = "/sample/"
   weight = 5
 
 # [[menu.main]]
