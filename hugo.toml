@@ -43,7 +43,9 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
 
   Github - https://github.com/dpvpro
 
-  Какая то [ссылка на google](https://www.google.com)
+  Google - [https://www.google.com](https://www.google.com)
+
+  Yandex - [https://ya.ru](https://ya.ru)
 
   """
   
@@ -52,7 +54,7 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   sidebarMenuHeader = "Sidebar Links"
 
   # sidebar links
-  github = "https://github.com/dpvpro"
+  github = ""
   bitbucket = ""
   twitter = ""
   mastodon = ""
@@ -70,7 +72,7 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   navigationNewWindow = false
 
   # If false, all of blog post will appear on front page (and in pagination)
-  truncate = true
+  truncate = false
 
   # Author's name (appears in meta tags and under posts)
   author = "Denis Proskurin"
