@@ -1,5 +1,5 @@
 ---
-title: "Поиск и замена в файлах в ОС Linux."
+title: "Поиск и замена в файлах в ОС Linux"
 date: "2015-05-10"
 categories: 
   - "linux"

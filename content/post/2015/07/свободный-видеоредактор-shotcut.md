@@ -1,5 +1,5 @@
 ---
-title: "Свободный видеоредактор Shotcut."
+title: "Свободный видеоредактор Shotcut"
 date: "2015-07-10"
 categories: 
   - "soft"

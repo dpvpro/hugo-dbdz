@@ -1,5 +1,5 @@
 ---
-title: "Нормальное отображение Disqus в Wordpress."
+title: "Нормальное отображение Disqus в Wordpress"
 date: "2015-05-17"
 categories: 
   - "wordpress"

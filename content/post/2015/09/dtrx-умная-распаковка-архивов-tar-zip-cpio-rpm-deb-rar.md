@@ -1,5 +1,5 @@
 ---
-title: "Dtrx - умная распаковка архивов (tar, zip, cpio, rpm, deb, rar)."
+title: "Dtrx - умная распаковка архивов (tar, zip, cpio, rpm, deb, rar)"
 date: "2015-09-25"
 categories: 
   - "linux"

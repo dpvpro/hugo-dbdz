@@ -1,5 +1,5 @@
 ---
-title: "Виды активации ОС Windows. Понятие KMS и MAK активации."
+title: "Виды активации ОС Windows. Понятие KMS и MAK активации"
 date: "2016-01-10"
 categories: 
   - "windows"
