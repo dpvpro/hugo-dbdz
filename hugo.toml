@@ -51,7 +51,7 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   
   # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
   sidebarMenuEnabled = true
-  sidebarMenuHeader = "Sidebar Links"
+  sidebarMenuHeader = "Каталог"
 
   # sidebar links
   github = ""
