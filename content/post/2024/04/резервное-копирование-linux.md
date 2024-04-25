@@ -37,7 +37,7 @@ tags = ["резервное копирование"]
 
 Есть папка с небольшим набором файлов. Есть другая папка с большим набором файлов. Первый набор входит во второй. Во втором наборе есть более новые версии файлов с теми же самыми именами что и в первом наборе. Задача синхронизировать версии файлов в первом наборе, взяв их из второго, и не трогая остальные.
 
-`rsync -tv --existing /share/stand/Vis/* /media/denpro/DEPOT1/Sertification2016/Repos2016/disks/skbv00033-02-visual/tnt-scylla/`
+`rsync -tv --existing /share/stand/vis/* /media/denpro/depot1/sertification2016/repos2016/disks/skbv00033-02-visual/tnt-scylla/`
 
 #### Резервное копирование всей системы
 
@@ -69,7 +69,7 @@ tar:
 Устанавливаем `squashfs-tools`:
 
 `sudo apt-get install squashfs-tools`
-`sudo mksquashfs / /media/dp/BEGEMOT/ubuntu.sqfs -no-duplicates -ef /home/dp/exclude.txt`
+`sudo mksquashfs / /media/dp/begemot/ubuntu.sqfs -no-duplicates -ef /home/dp/exclude.txt`
 
 exclude.txt – файл с исключениями. В отдельной строке файла содержится директория или файл исключения.
 
@@ -85,7 +85,7 @@ exclude.txt – файл с исключениями. В отдельной ст
 
 Для задействования всех ядер процессора нужно использовать утилиту `pigz`
 
-`sudo dd if=/dev/sda bs=8096 conv=noerror | pigz -3 > /run/media/manjaro/RESERVED2/sda.dd-image.gz`
+`sudo dd if=/dev/sda bs=8096 conv=noerror | pigz -3 > /run/media/manjaro/reserved2/sda.dd-image.gz`
 
 `sudo pigz -dc sda1.dd-image.gz | dd of=/dev/sda1 bs=8096`
 
@@ -93,19 +93,19 @@ exclude.txt – файл с исключениями. В отдельной ст
 
 ##### Прежний метод копирования tracey (deprecated):
 
-`time rsync -vrltDn --whole-file --info=progress2 /mnt/RESERVED4/tracey /mnt/MATRIX1/tracey` 
+`time rsync -vrltDn --whole-file --info=progress2 /mnt/reserved4/tracey /mnt/matrix1/tracey` 
 
 ##### Новый метод копирования tracey (deprecated):
 
-Исходим из того что MATRIX1 основной диск, MATRIX2 запасной:
+Исходим из того что `matrix1` основной диск, `matrix2` запасной:
 
-`time rsync -vrltDn --no-whole-file --inplace --ignore-times --info=progress2 /mnt/RESERVED4/tracey /mnt/MATRIX1/tracey`
+`time rsync -vrltDn --no-whole-file --inplace --ignore-times --info=progress2 /mnt/reserved4/tracey /mnt/matrix1/tracey`
 
-`time rsync -vrltDn --no-whole-file --inplace --ignore-times --info=progress2 /mnt/RESERVED4/tracey /mnt/MATRIX2/tracey`
+`time rsync -vrltDn --no-whole-file --inplace --ignore-times --info=progress2 /mnt/reserved4/tracey /mnt/matrix2/tracey`
 
 Копирование всего остального
 
-`time rsync -vrltDn --delete --info=progress2 /mnt/MATRIX1/ /mnt/MATRIX2/`
+`time rsync -vrltDn --delete --info=progress2 /mnt/matrix1/ /mnt/matrix2/`
 
 
 #### Резервная копия HDD to HHD для Ext4/Btrfs

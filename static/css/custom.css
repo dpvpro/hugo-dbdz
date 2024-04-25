@@ -69,3 +69,8 @@ aside.sidebar img {
     margin-left: auto;
     margin-right: auto;
 }
+
+hr.dashed {
+    border-top: 2px dashed #bbb;
+    margin-top: 24px;
+}
