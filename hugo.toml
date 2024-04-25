@@ -37,7 +37,6 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
   sidebarText = """
   
-
   Почта - dpvpro # gmail # com
 
   Телеграмм - dpvpro
@@ -46,8 +45,8 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
 
   Какая то [ссылка на google](https://www.google.com)
 
-
   """
+  
   # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
   sidebarMenuEnabled = true
   sidebarMenuHeader = "Sidebar Links"

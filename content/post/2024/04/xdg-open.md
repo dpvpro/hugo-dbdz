@@ -25,7 +25,9 @@ xdg-mime default thunar.desktop inode/directory
 
 Натолкнулся на то что утилита xdg-open открывает путь до точки монтирования НЕ корректно:
 
-`xdg-open /run/media/dp/test`
+```bash
+xdg-open /run/media/dp/test
+```
 
 Воспроизвелась ситуация когда открывается одновременно браузер и файловый менеджер.
 
