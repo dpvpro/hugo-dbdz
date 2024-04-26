@@ -72,7 +72,7 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   navigationNewWindow = false
 
   # If false, all of blog post will appear on front page (and in pagination)
-  truncate = false
+  truncate = true
 
   # Author's name (appears in meta tags and under posts)
   author = "Denis Proskurin"
@@ -187,24 +187,19 @@ limit = -1
   weight = 1
 
 [[menu.main]]
-  Name = "Posts"
-  URL = "/post/"
-  weight = 2
-
-[[menu.main]]
 Name = "Resume"
 URL = "/resume/"
-weight = 3
+weight = 2
 
 [[menu.main]]
   Name = "About"
   URL = "/about/"
-  weight = 4
+  weight = 3
 
 [[menu.main]]
   Name = "Sample"
   URL = "/sample/"
-  weight = 5
+  weight = 4
 
 # [[menu.main]]
 #   Name = "This theme on Github"
@@ -217,14 +212,19 @@ weight = 3
 # Enable with "sidebarMenuEnabled = true" under [params]
 # Header text is "sidebarMenuHeader" under [params]
 [[menu.sidebar]]
+  Name = "Posts"
+  URL = "/post/"
+  weight = 1
+
+[[menu.sidebar]]
 Name = "Сategory"
 URL = "/categories/"
-weight = 1
+weight = 2
 
 [[menu.sidebar]]
 Name = "Tags"
 URL = "/tags/"
-weight = 2
+weight = 3
 
 
 # Disqus shortcode

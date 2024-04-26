@@ -18,11 +18,13 @@
     }
 } */
 
+
 @media only screen and (min-width: 550px) {
     body>nav ul {
         padding-top: .04em;
     }
 }
+
 
 /* @media only screen and (min-width: 550px) {
     body>nav ul {
@@ -37,12 +39,20 @@
 } */
 
 
-
 @media only screen and (min-width: 550px) {
     body>nav form {
         padding-top: .14em;
     }
 }
+
+
+@media only screen and (min-width: 768px) {
+    article header {
+        margin-bottom: 0.7em;
+        padding-bottom: 1em;
+    }
+}
+
 
 @media only screen and (min-width: 992px) {
     body>nav form {
@@ -51,12 +61,6 @@
     }
 }
 
-
-/* @media only screen and (min-width: 992px) {
-    body>nav form .search {
-        margin-top: 6px;
-    }
-} */
 
 .flex-content,
 article img,
