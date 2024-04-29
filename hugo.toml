@@ -187,25 +187,24 @@ limit = -1
   weight = 1
 
 [[menu.main]]
+  Name = "Posts"
+  URL = "/post/"
+  weight = 2
+
+[[menu.main]]
 Name = "Resume"
 URL = "/resume/"
-weight = 2
+weight = 3
 
 [[menu.main]]
   Name = "About"
   URL = "/about/"
-  weight = 3
-
-[[menu.main]]
-  Name = "Sample"
-  URL = "/sample/"
   weight = 4
 
 # [[menu.main]]
-#   Name = "This theme on Github"
-#   URL = "https://www.github.com/parsiya/hugo-octopress"
-#   weight = 6
-
+#   Name = "Sample"
+#   URL = "/sample/"
+#   weight = 4
 
 
 # Sidebar menus

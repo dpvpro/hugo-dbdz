@@ -1,2 +1,6 @@
 User-agent: *
 Sitemap: https://daybydayz.ru/sitemap.xml
+
+Disallow: /201*/
+Disallow: /tag/
+Disallow: /category/
