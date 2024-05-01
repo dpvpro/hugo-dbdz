@@ -4,7 +4,6 @@ date: 2024-04-22T22:01:55+03:00
 toc: false
 comments: true
 categories:
-- linux
 - opensource
 tags:
 - xdg-open
