@@ -1,6 +1,9 @@
 ---
 title: "Работа с частными репозиториями из Goland (Golang) 2"
-date: "2023-04-27"
+date: 2023-04-27
+toc: false
+comments: true
+draft: false
 categories: 
   - "golang"
 tags: 
@@ -36,7 +39,6 @@ go: terraform-provider-spacevm imports
 	gitlab.space.team/dev/spacevm-go/api: gitlab.space.team/dev/spacevm-go@v0.0.0-20230302093536-f65e5b53e820: parsing go.mod:
 	module declares its path as: spacevm-go
 	        but was required as: gitlab.space.team/dev/spacevm-go
-
 ```
 
 необходимо в самописном модуле который импортируем и который расположен в приватном репозитории прописать правильное именование.

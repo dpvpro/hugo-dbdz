@@ -5,6 +5,7 @@ toc: false
 comments: true
 categories:
 - opensource
+- debug
 tags:
 - xdg-open
 - troubleshooting
