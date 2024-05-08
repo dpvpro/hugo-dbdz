@@ -85,9 +85,9 @@ exclude.txt – файл с исключениями. В отдельной ст
 
 Для задействования всех ядер процессора нужно использовать утилиту `pigz`
 
-`sudo dd if=/dev/sda bs=8096 conv=noerror | pigz -3 > /run/media/manjaro/reserved2/sda.dd-image.gz`
+`sudo dd if=/dev/sda bs=8M conv=noerror | pigz -0 > /mnt/apriel/lan-zotac.archlinux.sda.dd.gz`
 
-`sudo pigz -dc sda1.dd-image.gz | dd of=/dev/sda1 bs=8096`
+`sudo pigz -dc lan-zotac.archlinux.sda.dd.gz | dd of=/dev/sda1 bs=8M`
 
 #### Резервная копия HDD to HHD для ExFat
 
