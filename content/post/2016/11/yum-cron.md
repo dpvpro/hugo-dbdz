@@ -2,7 +2,6 @@
 title: "Автоматизация обновления ОС и ПО на CentOS 7 с помощью Yum-Cron"
 date: "2016-11-16"
 categories: 
-  - "centos"
   - "linux"
 tags: 
   - "centos"

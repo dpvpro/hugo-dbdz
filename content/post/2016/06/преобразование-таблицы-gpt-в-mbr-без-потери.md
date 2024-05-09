@@ -4,7 +4,6 @@ date: "2016-06-30"
 categories: 
   - "linux"
   - "windows"
-  - "программы"
 ---
 
 <!--more-->

@@ -8,6 +8,7 @@ comments: false
 categories:
 - opensource
 - debug
+- python
 tags:
 - python
 - pytest
@@ -209,7 +210,7 @@ FAILED setup.py::mypy
  -> error making: python-async_generator
 ```
 
-В ошибочных строках фигурируют модули mypy-status и mypy. Ищем установленные пакеты с такими именами:
+В ошибочных строках фигурируют модули `mypy-status` и `mypy`. Ищем установленные пакеты с такими именами:
 
 ```bash
 > yay -Qs mypy
