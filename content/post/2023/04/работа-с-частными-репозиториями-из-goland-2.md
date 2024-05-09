@@ -1,12 +1,9 @@
 ---
 title: "Работа с частными репозиториями из Goland (Golang) 2"
-date: 2023-04-27
-toc: false
-comments: true
-draft: false
-categories: 
+date: "2023-04-27T06:48:00+03:00"
+categories:
   - "golang"
-tags: 
+tags:
   - "gitlab"
   - "goland"
   - "golang"
@@ -23,9 +20,7 @@ go: gitlab.space.team/dev/spacevm-go@v0.0.0-20230427205557-c59c016940d9: invalid
 	terminal prompts disabled Confirm the import path was entered correctly.
 If this is a private repository, see https://golang.org/doc/faq#git_https for additional information.
 ```
-
 <!--more-->
-
 Что бы заставить его использовать `http` при работе частными репозиториями неободимо прописать авторизацию через файл `$HOME/.netrc`
 
 ```bash

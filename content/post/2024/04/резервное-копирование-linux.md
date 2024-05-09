@@ -1,10 +1,12 @@
-+++
-title = 'Резервное копирование в Linux'
-description = "Памятка по резервному копированию в Linux. Использование утилиты Rsync."
-date = 2024-04-16T21:12:00+03:00
-categories = ["linux"]
-tags = ["резервное копирование"]
-+++
+---
+title: "Резервное копирование в Linux"
+description: "Памятка по резервному копированию в Linux. Использование утилиты Rsync."
+date: "2024-04-16T21:12:00+03:00"
+categories: 
+  - "linux"
+tags: 
+  - "резервное копирование"
+---
 #### Резервное копирование
 
 `sudo rsync --delete -ravn --stats /media/veracrypt1/ /media/veracrypt2/`
