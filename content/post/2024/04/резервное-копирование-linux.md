@@ -11,6 +11,15 @@ tags = ["резервное копирование"]
 
 <!--more-->
 
+#### Squashfs
+
+Устанавливаем `squashfs-tools`:
+
+`sudo apt-get install squashfs-tools`
+`sudo mksquashfs / /media/dp/begemot/ubuntu.sqfs -no-duplicates -ef /home/dp/exclude.txt`
+
+`exclude.txt` – файл с исключениями. В отдельной строке файла содержится директория или файл исключения.
+
 #### Синхронизация 2-х директорий
 
 Используется для синхронизации музыкальной коллекции, когда в двух местах используются одинаковая структура, но в одном месте были изменены теги, без изменения даты файлов. 
@@ -51,49 +60,65 @@ tar:
 
 `sudo tar -cvpf /mnt/matrix2/system.tar --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys --exclude=/media --exclude=/nfs --exclude=/run --exclude=/tmp --exclude=.cache --exclude=/home /`
 
-Что, собственно, в ней заключено? 
+Что, собственно, в ней заключено?
+
 С правами суперпользователя (`sudo`) создаём тарбол (`tar` с ключём `-c`) и архивируем его архиватором `bz2`(ключ `-j`).
-Ключ `-p` для сохранения атрибутов и прав файлов. 
+
+Ключ `-p` для сохранения атрибутов и прав файлов.
+
 При этом с помощью ключа `--exclude` исключаем из архива системные директории и файлы устройств и, конечно же, сам архив (чтобы он рекурсивно не начал паковаться сам в себя).
+
 В итоге, получаем в корне наш полный архив системы в файле `system.tar`.
 
 Как его потом развернуть?
+
 Ну, во-первых, нужна будет всё-таки работающая система. Например, можно провести «чистую» установку (или же загрузиться с LiveCD).
+
 Будем считать, что у нас есть работающая система, в которой мы хотим развернуть наш архив. Хватит тоже одной команды:
 
 `tar xvpfz /mnt/matrix2/system.tar.bz2 -C /`
 
+#### DD клонирование
 
-#### Squashfs
-
-Устанавливаем `squashfs-tools`:
-
-`sudo apt-get install squashfs-tools`
-`sudo mksquashfs / /media/dp/begemot/ubuntu.sqfs -no-duplicates -ef /home/dp/exclude.txt`
-
-exclude.txt – файл с исключениями. В отдельной строке файла содержится директория или файл исключения.
-
-#### DD clone
-
-Упаковка:
+Классический способ, со сжатием:
 
 `sudo dd if=/dev/sda1 bs=8096 conv=noerror | gzip -9cf > sda1.dd-image.gz`
 
-Распаковка:
+Восстановление:
 
 `sudo gunzip -cd sda1.dd-image.gz | dd of=/dev/sda1 bs=8096` 
 
-Для задействования всех ядер процессора нужно использовать утилиту `pigz`
+---
 
-`sudo dd if=/dev/sda bs=8M conv=noerror | pigz -0 > /mnt/apriel/lan-zotac.archlinux.sda.dd.gz`
+Для задействования всех ядер процессора можно использовать утилиту `pigz`:
 
-`sudo pigz -dc lan-zotac.archlinux.sda.dd.gz | dd of=/dev/sda1 bs=8M`
+`sudo dd if=/dev/sda bs=8M conv=noerror status=progress | pigz -0 > /mnt/apriel/lan-zotac.archlinux.sda.dd.gz`
+
+`sudo pigz -dc /mnt/apriel/lan-zotac.archlinux.sda.dd.gz | dd of=/dev/sda bs=8M status=progress`
+
+---
+
+Без сжатия:
+
+`dd if=/dev/sda of=/mnt/apriel/lan-zotac.windows11.sda.dd bs=8M conv=noerror status=progress`
+
+`dd if=/mnt/apriel/lan-zotac.windows11.sda.dd of=/dev/sda bs=8M conv=noerror status=progress`
+
+---
+
+Самый интересный режим. C использованием `sparse` опции `dd`:
+
+https://www.baeldung.com/linux/clone-space-in-use-from-disk
+
+`dd if=/dev/sda of=/mnt/apriel/lan-zotac.archlinux.sda.sparse.dd bs=8M conv=sparse,noerror status=progress`
+
+`dd if=/mnt/apriel/lan-zotac.archlinux.sda.sparse.dd of=/dev/sda bs=8M status=progress`
 
 #### Резервная копия HDD to HHD для ExFat
 
 ##### Прежний метод копирования tracey (deprecated):
 
-`time rsync -vrltDn --whole-file --info=progress2 /mnt/reserved4/tracey /mnt/matrix1/tracey` 
+`time rsync -vrltDn --whole-file --info=progress2 /mnt/RESERVED4/tracey /mnt/MATRIX1/tracey` 
 
 ##### Новый метод копирования tracey (deprecated):
 
@@ -107,11 +132,12 @@ exclude.txt – файл с исключениями. В отдельной ст
 
 `time rsync -vrltDn --delete --info=progress2 /mnt/matrix1/ /mnt/matrix2/`
 
-
 #### Резервная копия HDD to HHD для Ext4/Btrfs
 
 `time sudo rsync -axHAXSvn --delete --info=progress2 /mnt/bublick/ /run/media/dp/test/`
 
-У VeraCrypt снять опцию "Оставлять время изменения контейнера неизменным" что бы у крипто контейнера менялась дата изменения и он входил в набор синхронизируемых файлов. 
+У VeraCrypt снять опцию "Оставлять время изменения контейнера неизменным" что бы у контейнера tracey менялась дата изменения и он входил в набор синхронизируемых файлов. 
 
-`time rsync -axHAXSvn --delete --info=progress2 --exclude={"/tmp","/proc","/dev","/sys","/run",".cache","/mnt"} / /mnt/vault/oldsys/`
+#### Архивация скрытых файлов и директорий домашнего каталога
+
+`tar cvf lan-lucky.home.tar --exclude=.cache ~/.[^.]*`
