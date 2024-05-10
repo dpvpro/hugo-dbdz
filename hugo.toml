@@ -118,7 +118,7 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
   """
 
   # Set to true to hide ReadingTime on posts
-  disableReadingTime = false
+  disableReadingTime = true
 
   # Set to true to disable downloading of remote Google fonts
   disableGoogleFonts = true
@@ -165,13 +165,12 @@ post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the
 # category = "categories"
 # tag = "tags" # Hugo’s output control
 
-# [outputs]
-# page = ["HTML"]
-# home = ["HTML", "SectionsRSS", "SectionsAtom", "SearchIndex", "Algolia"]
-# # home = ["HTML"]
-# section = ["HTML"]
-# taxonomy = ["HTML"]
-# term = ["HTML"]
+#[outputs]
+#page = ["HTML"]
+#home = ["HTML", "SectionsRSS", "SectionsAtom", "SearchIndex", "Algolia"]
+#section = ["HTML"]
+#taxonomy = ["HTML"]
+#term = ["HTML"]
 
 # Maximum number of items in the Atom & RSS feed
 [services.rss]
