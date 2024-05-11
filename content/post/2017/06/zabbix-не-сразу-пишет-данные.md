@@ -2,10 +2,10 @@
 title: "Zabbix не сразу пишет данные которые ему посылает zabbix_sender"
 date: "2017-06-26"
 categories: 
-  - "linux"
+  - "opensource"
+  - "debug"
 tags: 
-  - "import"
-  - "zabbix_sender"
+  - "zabbix"
 ---
 
 При проверке ПО на тестовом стенде были проведены исследования производительности.

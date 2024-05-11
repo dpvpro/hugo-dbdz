@@ -3,9 +3,9 @@ title: "Сборка программного обеспечения в deb па
 date: "2019-05-22"
 categories: 
   - "linux"
+  - "opensource"
 tags: 
-  - "deb build"
-  - "debian"
+  - "debian packaging"
   - "openvswitch"
 ---
 Возникла задача собрать deb пакеты Openvswitch на базе Debian 9.8. Сейчас я часто делаю подобные сборки ПО под определенную кодовую базу, поэтому данный пост я делаю в качестве заметки на будущее.

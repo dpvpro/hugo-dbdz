@@ -5,8 +5,6 @@ categories:
   - "python"
 tags: 
   - "pip"
-  - "update"
-  - "обновление"
 ---
 <!--more-->
 `pip | pip3` означает что запускаем либо pip, либо pip3.

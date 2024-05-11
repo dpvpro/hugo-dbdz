@@ -5,7 +5,7 @@ title = "Day by Day, Site by Site"
 theme = "hugo-octopress"
 
 # Number of blog posts in each pagination page
-paginate = 10
+paginate = 6
 
 [permalinks]
 post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the old ones

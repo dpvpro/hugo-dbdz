@@ -1,7 +1,7 @@
 ---
-title: "Отладка сборки библиотеки Python-jarowinkler под Manjaro Linux"
+title: "Отладка сборки python библиотеки на Manjaro Linux"
 date: 2024-05-09T01:55:26+03:00
-# description: "Отладка сборки библиотеки Python-jarowinkler под Manjaro Linux"
+# description: "Отладка сборки python библиотеки на Manjaro Linux"
 categories:
 - opensource
 - debug
