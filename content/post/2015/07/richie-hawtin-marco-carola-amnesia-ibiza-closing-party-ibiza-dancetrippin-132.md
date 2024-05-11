@@ -2,9 +2,9 @@
 title: "Richie Hawtin & Marco Carola @ Amnesia Ibiza Closing Party (Ibiza) [DanceTrippin #132]"
 date: "2015-07-31"
 categories: 
-  - "video"
-tags: 
   - "music"
+tags: 
+  - "richie hawtin"
 ---
 
 <!--more-->

@@ -2,9 +2,8 @@
 title: "The Martinez Brothers & Ilario Alicante @ Barrakud 2013 by LUCA DEA"
 date: "2015-09-28"
 categories: 
-  - "video"
-tags: 
   - "music"
+tags: 
   - "martinez brothers"
 ---
 

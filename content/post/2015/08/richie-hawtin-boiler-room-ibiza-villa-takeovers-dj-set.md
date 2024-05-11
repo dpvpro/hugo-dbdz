@@ -2,9 +2,9 @@
 title: "Richie Hawtin Boiler Room Ibiza Villa Takeovers DJ Set"
 date: "2015-08-05"
 categories: 
-  - "video"
-tags: 
   - "music"
+tags: 
+  - "richie hawtin"
 ---
 
 <!--more-->

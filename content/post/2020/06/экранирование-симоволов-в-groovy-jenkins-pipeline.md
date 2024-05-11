@@ -3,13 +3,12 @@ title: "Экранирование симоволов в Groovy (Jenkins pipelin
 date: "2020-06-15"
 categories:
   - "jenkins"
-  - "groovy"
   - "bash"
 tags: 
   - "jenkins"
   - "groovy"
-  - "escape character"
   - "bash"
+  - "escape character"
   - "экранирование"
 ---
 В задании Jenkins есть такое определение:

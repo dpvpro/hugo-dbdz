@@ -2,10 +2,9 @@
 title: "Poker Flat Podcast 30 mixed by Martin Landsky"
 date: "2015-09-25"
 categories: 
-  - "video"
+  - "music"
 tags: 
   - "martin landsky"
-  - "music"
 ---
 
 <!--more-->

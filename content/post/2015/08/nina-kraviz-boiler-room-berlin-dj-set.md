@@ -2,9 +2,8 @@
 title: "Nina Kraviz Boiler Room Berlin DJ Set"
 date: "2015-08-20"
 categories: 
-  - "video"
-tags: 
   - "music"
+tags: 
   - "boiler room"
   - "nina kraviz"
 ---

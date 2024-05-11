@@ -2,10 +2,9 @@
 title: "Sven Väth Boiler Room Berlin Groove Magazine take-over Mix"
 date: "2015-08-03"
 categories: 
-  - "video"
+  - "music"
 tags: 
   - "boiler room"
-  - "music"
 ---
 
 <!--more-->
