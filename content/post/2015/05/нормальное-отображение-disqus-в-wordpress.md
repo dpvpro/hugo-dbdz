@@ -2,11 +2,11 @@
 title: "Нормальное отображение Disqus в Wordpress"
 date: "2015-05-17"
 categories: 
-  - "wordpress"
+  - "soft"
 tags: 
-  - "css"
-  - "disqus"
   - "wordpress"
+  - "disqus"
+  - "css"
 ---
 
 <!--more-->
