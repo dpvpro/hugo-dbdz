@@ -1,6 +1,8 @@
 baseurl = "https://daybydayz.ru/"
 disablePathToLower = false
-languageCode = "en-us"
+languageCode = 'ru-ru'
+languageName = 'ru'
+defaultContentLanguage = "ru"
 title = "Day by Day, Site by Site"
 theme = "hugo-octopress"
 

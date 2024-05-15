@@ -4,10 +4,9 @@ date: "2018-02-05"
 categories: 
   - "linux"
 tags: 
-  - "ansible"
+  - "ansible role"
   - "clickhouse"
   - "zookeper"
-  - "iac"
 ---
 
 <!--more-->
