@@ -33,7 +33,7 @@
     {{ end }}
 
   </p>
-  {{ if .Site.DisqusShortname }}
+  {{ if .Site.Config.Services.Disqus.Shortname }}
     {{ if not (eq .Params.comments false) }}
       {{ template "_internal/disqus.html" . }}
     {{ end }}

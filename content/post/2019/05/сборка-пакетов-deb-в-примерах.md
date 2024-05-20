@@ -5,7 +5,7 @@ categories:
   - "linux"
   - "opensource"
 tags: 
-  - "debian packaging"
+  - "debian package"
   - "openvswitch"
 ---
 Возникла задача собрать deb пакеты Openvswitch на базе Debian 9.8. Сейчас я часто делаю подобные сборки ПО под определенную кодовую базу, поэтому данный пост я делаю в качестве заметки на будущее.
