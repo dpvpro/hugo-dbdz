@@ -1,19 +1,20 @@
 ---
 title: "Работа с частными репозиториями из Goland (Golang) 1"
 date: "2022-01-13T06:48:00+03:00"
-categories: 
+categories:
   - "golang"
-tags: 
+tags:
   - "gitlab"
   - "goland"
-  - "golang"
   - "https"
-  - "import"
-  - "modules"
+  - "import go modules"
 ---
+
 **Golang** и линейка продуктов **JetBrains**, куда входят **Goland** и **Pycharm**, ориентированны на работу с внешними сервисами, такими как **Github**.
 **Github** работает по `https` протоколу, для менеджера пакетов **Golang** необходима система контроля версий, поддерживающая `https` протокол, иначе он не захочет качать пакеты.
+
 <!--more-->
+
 Во множестве организаций использутся внутренние репозитории кода. У нас код хостится на внутреннем сервере **Gitlab**.
 При этом `https` не используется, используется `http`. При импорте модулей в пакет при разработке на **Golang** возникает проблема:
 
@@ -29,7 +30,7 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 Что делал что бы побороть ошибку:
 
-* запилил самоподписанные сертфикаты для **Gitlab**, не помогло:
+- запилил самоподписанные сертфикаты для **Gitlab**, не помогло:
 
 ```go
 go: finding module for package gitlab.bazalt.team/dev/veil-api-client-go/veil
@@ -38,9 +39,9 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 ```
 
-* экспериментировал с `git` на локальном хосте как [здесь](https://stackoverflow.com/questions/29707689/how-to-use-go-with-a-private-gitlab-repo), не помогло:
+- экспериментировал с `git` на локальном хосте как [здесь](https://stackoverflow.com/questions/29707689/how-to-use-go-with-a-private-gitlab-repo), не помогло:
 
-* поспал, начал читать разное про модули, в итоге набрел на ["Go Modules Reference"](https://go.dev/ref/mod#environment-variables), помогло...
+- поспал, начал читать разное про модули, в итоге набрел на ["Go Modules Reference"](https://go.dev/ref/mod#environment-variables), помогло...
 
 В настройках проекта Goland устанавливаем переменные с исключениями из внутренних серверов и удаляем старые версии модулей в консоли:
 
