@@ -13,7 +13,7 @@ tags:
 
 Копируем роль:
 
-[https://github.com/dpvpro/ansible-clickhouse-dp](https://github.com/dpvpro/ansible-clickhouse-dp)
+`git clone https://github.com/dpvpro/ansible-clickhouse-dp`
 
 Настраиваем хосты в `ansible_hosts`:
 
@@ -55,3 +55,5 @@ SELECT * from test.Migrations
 ```
 
 Должны быть выведены реплицированные данные, т.е. задача выполнена.
+
+Плейбук был использован в докладе https://habr.com/ru/articles/484640/

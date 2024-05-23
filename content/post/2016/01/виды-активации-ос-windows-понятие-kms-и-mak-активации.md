@@ -1,13 +1,14 @@
 ---
-title: "Виды активации ОС Windows. Понятие KMS и MAK активации"
-date: "2016-01-10"
+title: Виды активации ОС Windows. Понятие KMS и MAK активации
+slug: виды-активации-ос-windows-понятие-kms-и-mak-активации
+date: 2016-01-10
 categories: 
-  - "windows"
+  - windows
 tags: 
-  - "kms ключ"
-  - "mak ключ"
-  - "volume license"
-  - "корпоративная лицензия windows"
+  - kms ключ
+  - mak ключ
+  - volume license
+  - корпоративная лицензия windows
 ---
 <!--more-->
 

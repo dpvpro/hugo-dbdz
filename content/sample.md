@@ -1,7 +1,7 @@
 ---
 title: "Пример страницы"
 date: "2015-05-09"
-draft: true
+draft: false
 ---
 
 This is an example page. It's different from a blog post because it will stay in one place and will show up in your site

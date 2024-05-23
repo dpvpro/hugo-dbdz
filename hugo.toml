@@ -10,7 +10,11 @@ theme = "hugo-octopress"
 paginate = 6
 
 [permalinks]
-post = "/entry/:year-:month-:day-:title/" # change the post URL to look like the old ones
+# change the post URL to look like the old ones
+post = "/entry/:year-:month-:day-:slug/" 
+# record = "/:filename/"
+# record = "/entry/:filename/"
+# note = "/note/:filename/"
 
 [markup]
   # Default is startLevel 2 and endLevel 3, we want to render every heading
@@ -195,17 +199,17 @@ limit = -1
 [[menu.main]]
 Name = "Resume"
 URL = "/resume/"
-weight = 3
+weight = 5
 
 [[menu.main]]
   Name = "About"
   URL = "/about/"
   weight = 4
 
-# [[menu.main]]
-#   Name = "Sample"
-#   URL = "/sample/"
-#   weight = 4
+[[menu.main]]
+  Name = "Sample"
+  URL = "/sample/"
+  weight = 3
 
 
 # Sidebar menus
