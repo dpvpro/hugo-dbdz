@@ -64,4 +64,4 @@ tags:
 Существует ограничение на количество активаций на которые вы имеете право. Инструмент VAMT может кэшировать запросы активации.
 Таким образом можно избежать лишних запросов активации к серверам Microsoft, и переактивировать их без достижения предела активации.
 
-Перевод - [Источник](http://louwrentius.com/understanding-windows-kms-and-mak-volume-license-activation.html)
+[Источник](http://louwrentius.com/understanding-windows-kms-and-mak-volume-license-activation.html)

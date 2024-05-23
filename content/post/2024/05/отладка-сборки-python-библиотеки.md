@@ -3,9 +3,9 @@ title: Отладка сборки python библиотеки на Manjaro Linu
 date: 2024-05-09T01:55:26+03:00
 # description: "Отладка сборки python библиотеки на Manjaro Linux"
 categories:
-  - opensource
-  - debug
   - python
+  - debug
+  - opensource
 tags:
   - python
   - pytest
