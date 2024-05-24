@@ -10,8 +10,8 @@ theme = "hugo-octopress"
 paginate = 6
 
 [permalinks]
-# change the post URL to look like the old ones
-post = "/entry/:year-:month-:day-:slug/" 
+# change the post URL to look like the old ones,
+post = "/entry/:year-:month-:day-:slug/"
 # record = "/:filename/"
 # record = "/entry/:filename/"
 # note = "/note/:filename/"
@@ -42,7 +42,7 @@ post = "/entry/:year-:month-:day-:slug/"
   # New lines can be added with two spaces at the end of line. New paragraphs can be added with two an empty line.
   # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
   sidebarText = """
-  
+
   Почта - dpvpro # gmail # com
 
   Телеграмм - dpvpro
@@ -54,7 +54,7 @@ post = "/entry/:year-:month-:day-:slug/"
   Yandex - [https://ya.ru](https://ya.ru)
 
   """
-  
+
   # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
   sidebarMenuEnabled = true
   sidebarMenuHeader = "Каталог"
@@ -131,7 +131,7 @@ post = "/entry/:year-:month-:day-:slug/"
 
   # Remove or Set to false to use local fonts
   # remoteFonts = false
-  
+
   # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
   # fontAwesome = false
 
@@ -145,7 +145,7 @@ post = "/entry/:year-:month-:day-:slug/"
   # Enable with this.
   # twitterCardEnabled = true
   # Don't include the @.
-  # twitterCardSite = 
+  # twitterCardSite =
   # twitterCardDomain = "parsiya.net"
   # Don't include the @.
   # twitterCardAuthor = "CryptoGangsta"
