@@ -4,11 +4,11 @@ date: "2020-06-15"
 categories:
   - "soft"
 tags: 
-  - "jenkins"
-  - "groovy"
-  - "bash"
-  - "escape character"
-  - "экранирование"
+  - "jenkins pipeline"
+  - "groovy escape character"
+  - "groovy экранирование символов"
+  - "groovy экранирование кавычек"
+  - "groovy экранирование"
 ---
 В задании Jenkins есть такое определение:
 

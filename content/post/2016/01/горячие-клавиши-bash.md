@@ -5,8 +5,8 @@ categories:
   - "linux"
   - "bash"
 tags: 
-  - "bash"
-  - "shortcuts"
+  - "bash горячие клавиши"
+  - "bash shortcuts"
 ---
 <!--more-->
 |Комбинация клавиш |             Описание                                                                                                                           |

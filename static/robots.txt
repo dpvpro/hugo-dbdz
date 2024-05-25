@@ -5,3 +5,4 @@ Disallow: /201*/
 Disallow: /202*/
 Disallow: /tag/
 Disallow: /category/
+Disallow: /page/

@@ -1,13 +1,21 @@
 ---
-title: "Восстановление Grub на компьютере с Linux, UEFI, GPT"
-date: "2016-06-11"
-description: "Восстановление Grub на компьютере с Linux, UEFI, GPT"
+title: Восстановление Grub на компьютере с Linux, UEFI, GPT
+date: 2016-06-11
+description: Восстановление Grub на компьютере с Linux, UEFI, GPT
 categories: 
-  - "linux"
+  - linux
 tags: 
-  - "grub recovery"
-  - "восстановление grub"
-  - "uefi"
+  - grub uefi
+  - grub efi
+  - восстановление grub uefi
+  - восстановление grub efi
+  - восстановить grub uefi
+  - grub uefi установка
+  - установить grub uefi
+  - linux uefi grub
+  - установка grub
+  - восстановить grub
+  - восстановление grub
 ---
 
 При попытке сделать загрузочную флэшку, сделал процедуру установки загрузчка *Grub* на флэшку.

@@ -5,10 +5,15 @@ date: 2016-01-10
 categories: 
   - windows
 tags: 
-  - kms ключ
-  - mak ключ
+  - kms ключи
+  - ключ mak
   - volume license
-  - корпоративная лицензия windows
+  - windows корпоративная лицензия
+  - kms активация
+  - активация windows kms
+  - mak активация
+  - активация mak ключом
+  - корпоративное лицензирование
 ---
 <!--more-->
 
