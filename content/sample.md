@@ -8,7 +8,7 @@ This is an example page. It's different from a blog post because it will stay in
 navigation (in most themes). Most people start with an About page that introduces them to potential site visitors.
 It might say something like this:
 
-> Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my blog. 
+> Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my blog.
 > I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin' caught in the rain.)
 
 ...or something like this:
@@ -68,4 +68,6 @@ def test_clear_datapool(local_datapool):
     File.not_exist(file.uuid)
 ```
 
-https://soundcloud.com/mixcult/kirill-matveev-breed?in=mixcult/sets/mixcult-2016
+{{< soundcloud-track 205577939 >}}
+
+https://soundcloud.com/mixcult/kirill-matveev-breed
