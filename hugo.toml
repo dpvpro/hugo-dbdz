@@ -221,14 +221,14 @@ weight = 5
   weight = 1
 
 [[menu.sidebar]]
-Name = "Сategory"
-URL = "/categories/"
-weight = 2
+  Name = "Сategory"
+  URL = "/categories/"
+  weight = 2
 
 [[menu.sidebar]]
-Name = "Tags"
-URL = "/tags/"
-weight = 3
+  Name = "Tags"
+  URL = "/tags/"
+  weight = 3
 
 
 # Disqus shortcode
