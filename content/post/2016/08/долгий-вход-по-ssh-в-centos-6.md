@@ -1,12 +1,10 @@
 ---
 title: "Долгий вход по Ssh в CentOS 6"
 date: "2016-08-14"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "centos"
-  - "ssh"
-  - "долгий вход"
+tags:
+  - "долгий вход по ssh"
 ---
 
 <!--more-->

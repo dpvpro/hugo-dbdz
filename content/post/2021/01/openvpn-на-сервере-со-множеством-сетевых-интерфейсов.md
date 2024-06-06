@@ -1,11 +1,10 @@
 ---
 title: "OpenVPN на сервере со множеством сетевых интерфейсов"
 date: "2021-01-30"
-categories: 
+categories:
   - "network"
-tags: 
-  - "openvpn"
-  - "multihome"
+tags:
+  - "openvpn multihome"
 ---
 <!--more-->
 При настройке OpenVPN сервера в контейнере существует два сетевых интерфейса:
