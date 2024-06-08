@@ -5,6 +5,7 @@ categories:
   - "network"
 tags:
   - "openvpn multihome"
+  - "openvpn множество интерфейсов"
 ---
 <!--more-->
 При настройке OpenVPN сервера в контейнере существует два сетевых интерфейса:
