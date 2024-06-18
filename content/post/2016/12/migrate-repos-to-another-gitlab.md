@@ -1,13 +1,10 @@
 ---
 title: "Миграция репозиториев gitlab на другой сервер"
 date: "2016-12-22"
-categories: 
-  - "bash"
-  - "linux"
-tags: 
-  - "bash"
-  - "gitlab"
-  - "перенос репозиториев"
+categories:
+  - "DevOps"
+tags:
+  - "gitlab перенос репозиториев"
 ---
 
 <!--more-->
