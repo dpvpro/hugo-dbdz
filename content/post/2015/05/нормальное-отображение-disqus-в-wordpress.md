@@ -1,12 +1,10 @@
 ---
 title: "Нормальное отображение Disqus в Wordpress"
 date: "2015-05-17"
-categories: 
+categories:
   - "soft"
-tags: 
-  - "wordpress"
-  - "disqus"
-  - "css"
+tags:
+  - "wordpress disqus css"
 ---
 
 <!--more-->
@@ -16,7 +14,7 @@ tags:
 ```css
 #disqus_thread {
 margin-left: 75px;
-} 
+}
 
 ```
 

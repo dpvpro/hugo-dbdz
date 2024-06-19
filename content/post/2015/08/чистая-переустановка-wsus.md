@@ -1,10 +1,10 @@
 ---
 title: "Переустановка WSUS с настройками по умолчанию"
 date: "2015-08-04"
-categories: 
+categories:
   - "windows"
-tags: 
-  - "wsus"
+tags:
+  - "переустановка wsus"
 ---
 
 <!--more-->
