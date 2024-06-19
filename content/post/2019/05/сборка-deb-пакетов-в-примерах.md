@@ -4,6 +4,7 @@ date: "2019-05-22"
 categories:
   - "linux"
   - "opensource"
+  - "devops"
 tags:
   - "deb пакеты"
   - "сборка deb пакетов"

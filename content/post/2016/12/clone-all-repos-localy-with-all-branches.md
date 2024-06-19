@@ -2,7 +2,7 @@
 title: "Склонировать список репозиториев gitlab со всеми ветками"
 date: "2016-12-22"
 categories:
-  - "DevOps"
+  - "devops"
 tags:
   - "gitlab резервная копия"
 ---

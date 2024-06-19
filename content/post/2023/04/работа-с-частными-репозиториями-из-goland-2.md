@@ -4,10 +4,12 @@ date: "2023-04-27T06:48:00+03:00"
 categories:
   - "golang"
 tags:
-  - "gitlab"
-  - "goland"
-  - "https"
-  - "import go modules"
+  - "go modules import"
+  - "golang gitlab"
+  - "golang private repo"
+  - "golang частные репозитории"
+  - "golang http"
+
 ---
 
 Golang при работе с внешними зависимостями по умолчанию работает с `https` протколом. Поэтому с настройками по умолчанию возникает ошибка ниже:
@@ -25,7 +27,7 @@ If this is a private repository, see https://golang.org/doc/faq#git_https for ad
 Что бы заставить его использовать `http` при работе частными репозиториями неободимо прописать авторизацию через файл `$HOME/.netrc`
 
 ```bash
-machine gitlab.space.team login USERNAME password PASSWORD(APIKEY)
+machine gitlab.space.team login USERNAME password PASSWORD
 ```
 
 При возникновении следующей ошибки:

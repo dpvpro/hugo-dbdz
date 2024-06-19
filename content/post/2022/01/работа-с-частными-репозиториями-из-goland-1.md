@@ -4,14 +4,15 @@ date: "2022-01-13T06:48:00+03:00"
 categories:
   - "golang"
 tags:
-  - "gitlab"
-  - "goland"
-  - "https"
-  - "import go modules"
+  - "go modules import"
+  - "golang gitlab"
+  - "golang private repo"
+  - "golang частные репозитории"
+  - "goinsecure"
 ---
 
 **Golang** и линейка продуктов **JetBrains**, куда входят **Goland** и **Pycharm**, ориентированны на работу с внешними сервисами, такими как **Github**.
-**Github** работает по `https` протоколу, для менеджера пакетов **Golang** необходима система контроля версий, поддерживающая `https` протокол, иначе он не захочет качать пакеты.
+**Github** использует `https` протокол.  В менеджере пакетов **Golang**  по умолчанию настроена работа с использованием `https` протокола.
 
 <!--more-->
 
@@ -43,7 +44,7 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 - поспал, начал читать разное про модули, в итоге набрел на ["Go Modules Reference"](https://go.dev/ref/mod#environment-variables), помогло...
 
-В настройках проекта Goland устанавливаем переменные с исключениями из внутренних серверов и удаляем старые версии модулей в консоли:
+В настройках проекта **Goland** устанавливаем переменные с исключениями из внутренних серверов и удаляем старые версии модулей в консоли:
 
 ![](/images/2022/01/golang_settings.png)
 
@@ -51,6 +52,6 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 go clean -modcache
 ```
 
-Может потребоваться перезапуск Goland. Модули нормально импортировались:
+Может потребоваться перезапуск **Goland**. Модули нормально импортировались:
 
 ![](/images/2022/01/golang_https2.png)

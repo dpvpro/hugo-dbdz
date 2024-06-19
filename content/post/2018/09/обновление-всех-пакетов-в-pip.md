@@ -4,7 +4,7 @@ date: "2018-09-24"
 categories: 
   - "python"
 tags: 
-  - "pip"
+  - "pip update"
 ---
 <!--more-->
 `pip | pip3` означает что запускаем либо pip, либо pip3.

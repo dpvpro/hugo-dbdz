@@ -7,14 +7,14 @@ categories:
 tags:
   - rsync linux
   - rsync примеры
-  - копирование rsync
   - rsync linux примеры
   - rsync linux копирование файлов
   - rsync файлов
-  - dd clone
+  - копирование rsync
   - клонирование dd
   - клонирование диска linux
   - клонирование диска dd linux
+  - dd clone
 ---
 #### Резервное копирование
 

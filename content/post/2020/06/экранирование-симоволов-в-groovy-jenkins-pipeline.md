@@ -2,7 +2,7 @@
 title: "Экранирование симоволов в Groovy (Jenkins pipeline)"
 date: "2020-06-15"
 categories:
-  - "DevOps"
+  - "devops"
 tags:
   - "jenkins pipeline"
   - "groovy escape character"
