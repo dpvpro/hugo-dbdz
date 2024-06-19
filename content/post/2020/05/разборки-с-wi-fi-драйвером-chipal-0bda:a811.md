@@ -1,13 +1,10 @@
 ---
 title: "Разборки с драйвером Wi-Fi адаптера Chipal 0bda:a811"
 date: "2020-05-07"
-categories: 
-  - "linux"
+categories:
   - "network"
-tags: 
-  - "0bda:a811"
-  - "driver"
-  - "wi-fi"
+tags:
+  - "wi-fi driver 0bda:a811"
 ---
 Имею Wi-Fi адаптер купленный на Алиэкспрес под именем CHIPAL 802.11AC 600 Мбит/с.
 ![](/images/2020/05/chipal.png)

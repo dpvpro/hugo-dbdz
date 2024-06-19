@@ -1,13 +1,10 @@
 ---
 title: "Отключить dnsmask в Network Manager для корректной работы VPN"
 date: "2018-09-24"
-categories: 
-  - "linux"
+categories:
   - "network"
-tags: 
-  - "dns"
-  - "network manager"
-  - "vpn"
+tags:
+  - "vpn dns network manager"
 ---
 
 После настройки openvpn клиента, блокировки Роскомнадзора все равно срабатывали.

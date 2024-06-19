@@ -1,11 +1,10 @@
 ---
 title: "Cisco AnyConnect Compatible VPN"
 date: "2016-11-16"
-categories: 
-  - "linux"
-tags: 
-  - "cisco"
-  - "vpn"
+categories:
+  - "network"
+tags:
+  - "linux cisco vpn"
 ---
 
 <!--more-->

@@ -1,13 +1,10 @@
 ---
 title: 'Ошибка обновления Opera "Sub-process /usr/bin/dpkg returned an error code (1)"'
 date: "2016-06-14"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "linux"
-  - "opera"
-  - "ubuntu"
-  - "ошибка обновления"
+tags:
+  - "ubuntu opera ошибка обновления"
 ---
 
 <!--more-->
@@ -15,9 +12,9 @@ tags:
 После установки браузера Opera на Ubuntu, при последующем обновлении, возникает ошибка `Sub-process /usr/bin/dpkg returned an error code (1)`.
 
 ```bash
-22:25:29 [user@host ~]$ sudo apt upgrade 
+22:25:29 [user@host ~]$ sudo apt upgrade
 Чтение списков пакетов… Готово
-Построение дерева зависимостей       
+Построение дерева зависимостей
 Чтение информации о состоянии… Готово
 Расчёт обновлений…Готово
 Пакеты, которые будут обновлены:
@@ -28,7 +25,7 @@ tags:
 Хотите продолжить? [Д/н] y
 Получено:1 http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu/ trusty/main syncthing-gtk all 0.9.0.3-1~webupd8~trusty0 [370 kB]
 Получено:2 http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu/ trusty/main youtube-dl all 2016.06.14-1~webupd8~trusty1 [733 kB]
-Получено 50,4 MБ за 1мин 52с (447 kБ/c)                                        
+Получено 50,4 MБ за 1мин 52с (447 kБ/c)
 Предварительная настройка пакетов ...
 (Чтение базы данных … на данный момент установлено 978819 файлов и каталогов.)
 Preparing to unpack …/opera-stable_38.0.2220.31_amd64.deb ...

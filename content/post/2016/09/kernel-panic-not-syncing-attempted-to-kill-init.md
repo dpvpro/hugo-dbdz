@@ -1,11 +1,10 @@
 ---
 title: "Kernel panic - not syncing: Attempted to kill init!"
 date: "2016-09-07"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "centos"
-  - "kernel panic"
+tags:
+  - "centos kernel panic"
 ---
 
 <!--more-->

@@ -1,12 +1,10 @@
 ---
 title: "Проблемы при работе с файловой системой ExFat"
 date: "2016-02-07"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "bugs"
-  - "exfat"
-  - "mount"
+tags:
+  - "exfat mount bug"
 ---
 Переписал на диск с файловой системой `exfat` большой каталог со множеством файлов на ОС Windows 7. При попытке работы с этим каталогом из под Ubuntu диск постоянно отваливался с ошибкой:
 
@@ -21,7 +19,7 @@ sudo fsck.exfat /dev/sdc1
 
 ```
 
-возникали ошибки: 
+возникали ошибки:
 
 `ERROR: name is too long.` и `BUG: failed to convert name to UTF-8.`
 

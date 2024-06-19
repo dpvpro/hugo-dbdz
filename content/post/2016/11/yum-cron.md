@@ -1,12 +1,10 @@
 ---
 title: "Автоматизация обновления ОС и ПО на CentOS 7 с помощью Yum-Cron"
 date: "2016-11-16"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "centos"
-  - "yum"
-  - "cron"
+tags:
+  - "centos yum cron"
 ---
 
 <!--more-->
@@ -20,7 +18,7 @@ chkconfig yum-cron on
 
 ```
 
-Поведение программы контролируют 3-и параметра в файле `/etc/yum/yum-cron.conf` или `/etc/yum/yum-cron-hourly.conf`. 
+Поведение программы контролируют 3-и параметра в файле `/etc/yum/yum-cron.conf` или `/etc/yum/yum-cron-hourly.conf`.
 
 Эти параметры по умолчанию выставлены в `no`. Необходимо изменить это. Я не буду использовать `/etc/yum/yum-cron-hourly.conf`, который отвечает за ежечасные обновления. Будем работать с `/etc/yum/yum-cron.conf`, который отвечает за обновления раз в сутки.
 

@@ -1,10 +1,9 @@
 ---
 title: "Zabbix не сразу пишет данные которые ему посылает zabbix_sender"
 date: "2017-06-26"
-categories: 
-  - "opensource"
+categories:
   - "debug"
-tags: 
+tags:
   - "zabbix"
 ---
 

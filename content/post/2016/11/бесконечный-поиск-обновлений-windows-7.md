@@ -1,11 +1,10 @@
 ---
 title: "Бесконечный поиск обновлений Windows 7"
 date: "2016-11-30"
-categories: 
+categories:
   - "windows"
-tags: 
-  - "windows 7"
-  - "обновления"
+tags:
+  - "windows 7 обновления"
 ---
 
 <!--more-->

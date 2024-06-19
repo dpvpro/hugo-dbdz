@@ -1,11 +1,10 @@
 ---
 title: 'Парсер раздел "Работа" сайта avito.ru'
 date: "2015-09-14"
-categories: 
+categories:
   - "python"
-tags: 
-  - "avito"
-  - "parser"
+tags:
+  - "parser avito"
 ---
 
 <!--more-->
