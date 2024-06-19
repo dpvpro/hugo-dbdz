@@ -1,9 +1,9 @@
 ---
 title: "Роль Ansible для установки Clickhouse и Zookeper"
 date: "2018-02-05"
-categories: 
-  - "linux"
-tags: 
+categories:
+  - "devops"
+tags:
   - "ansible role clickhouse"
   - "clickhouse ansible"
 ---

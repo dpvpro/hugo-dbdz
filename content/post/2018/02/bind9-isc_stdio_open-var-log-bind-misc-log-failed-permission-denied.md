@@ -1,12 +1,10 @@
 ---
 title: "Bind9 - isc_stdio_open '/var/log/bind/misc.log' failed: permission denied"
 date: "2018-02-12"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "apparmor"
-  - "bind"
-  - "ubuntu"
+tags:
+  - "ubuntu apparmor bind"
 ---
 При настройке сервиса _bind_ на Ubuntu 16.04 столкнулся с ошибкой:
 
