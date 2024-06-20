@@ -4,8 +4,9 @@ date: "2018-02-05"
 categories:
   - "devops"
 tags:
-  - "ansible role clickhouse"
+  - "ansible clickhouse"
   - "clickhouse ansible"
+  - "clickhouse ansible role"
 ---
 
 <!--more-->

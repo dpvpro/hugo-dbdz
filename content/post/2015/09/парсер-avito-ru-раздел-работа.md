@@ -4,6 +4,7 @@ date: "2015-09-14"
 categories:
   - "python"
 tags:
+  - "парсинг авито python"
   - "parser avito"
 ---
 
