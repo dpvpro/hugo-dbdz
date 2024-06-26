@@ -5,9 +5,8 @@ date: 2024-05-09T01:55:26+03:00
 categories:
   - python
   - debug
-  - opensource
 tags:
-  - python
+  - debug python library
   - pytest
 ---
 

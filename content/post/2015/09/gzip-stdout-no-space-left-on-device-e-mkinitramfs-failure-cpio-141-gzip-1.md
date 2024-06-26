@@ -4,7 +4,7 @@ date: "2015-09-28"
 categories:
   - "linux"
 tags:
-  - "ubuntu gzip stdout no space left on device"
+  - "gzip stdout no space left on device"
 ---
 
 Столкнулся с тем, что при обновлении Ubuntu Server 14.04 возникает ошибка:

@@ -1,11 +1,10 @@
 ---
 title: "AttributeError: 'module' object has no attribute 'command' в Python"
 date: "2016-02-26"
-categories: 
+categories:
   - "python"
-tags: 
-  - "attribute error"
-  - "python"
+tags:
+  - "python attribute error"
 ---
 <!--more-->
 

@@ -1,10 +1,11 @@
 ---
 title: "Долгое монтирование NFS папки"
 date: "2016-04-05"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "nfs"
+tags:
+  - "nfs долгое монтирование"
+  - "nfs long mount"
 ---
 <!--more-->
 

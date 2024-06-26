@@ -1,12 +1,10 @@
 ---
 title: "Решение проблемы «No module named SpiceClientGtk» в virt-manager"
 date: "2016-03-21"
-categories: 
+categories:
   - "linux"
-tags: 
-  - "kvm"
-  - "libvirt"
-  - "spice"
+tags:
+  - "kvm libvirt spice"
 ---
 <!--more-->
 
