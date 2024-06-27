@@ -136,7 +136,7 @@ https://www.baeldung.com/linux/clone-space-in-use-from-disk
 
 ##### Прежний метод копирования tracey (deprecated):
 
-`time rsync -vrltDn --whole-file --info=progress2 /mnt/RESERVED4/tracey /mnt/MATRIX1/tracey`
+`time rsync -vrltDn --whole-file --info=progress2 /mnt/reserved4/tracey /mnt/matrix1/tracey`
 
 ##### Новый метод копирования tracey (deprecated):
 
