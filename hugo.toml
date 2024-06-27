@@ -18,147 +18,147 @@ post = "/entry/:year-:month-:day-:slug/"
 
 [markup]
   # Default is startLevel 2 and endLevel 3, we want to render every heading
-  [markup.tableOfContents]
-    endLevel = 8
-    startLevel = 1
-  # set the Chroma highlighting options
-  # https://gohugo.io/getting-started/configuration-markup/#highlight
-  [markup.highlight]
-  # style = "solarized-dark"
-  # style = "tango"
-    style = "catppuccin-latte"
+[markup.tableOfContents]
+endLevel = 8
+startLevel = 1
+# set the Chroma highlighting options
+# https://gohugo.io/getting-started/configuration-markup/#highlight
+[markup.highlight]
+# style = "solarized-dark"
+# style = "tango"
+style = "catppuccin-latte"
 
 
 [params]
 
-  # --- Start sidebar options ---
-  # Number of last posts that will be displayed in the sidebar - set to 0 or remove to hide this section
-  sidebarRecentLimit = 5
+# --- Start sidebar options ---
+# Number of last posts that will be displayed in the sidebar - set to 0 or remove to hide this section
+sidebarRecentLimit = 5
 
-  # Sidebar header - passed to markdownify so you can write markdown here
-  sidebarHeader = "Контакты"
+# Sidebar header - passed to markdownify so you can write markdown here
+sidebarHeader = "Контакты"
 
-  # Sidebar text also supports markdown
-  # New lines can be added with two spaces at the end of line. New paragraphs can be added with two an empty line.
-  # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
-  sidebarText = """
+# Sidebar text also supports markdown
+# New lines can be added with two spaces at the end of line. New paragraphs can be added with two an empty line.
+# when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
+sidebarText = """
 
-  Почта - dpvpro # gmail # com
+Почта - dpvpro # gmail # com
 
-  Телеграмм - dpvpro
+Телеграмм - dpvpro
 
-  Github - https://github.com/dpvpro
+Github - https://github.com/dpvpro
 
-  Google - [https://www.google.com](https://www.google.com)
+Google - [https://www.google.com](https://www.google.com)
 
-  Yandex - [https://ya.ru](https://ya.ru)
+Yandex - [https://ya.ru](https://ya.ru)
 
-  """
+"""
 
-  # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
-  sidebarMenuEnabled = true
-  sidebarMenuHeader = "Каталог"
+# Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
+sidebarMenuEnabled = true
+sidebarMenuHeader = "Каталог"
 
-  # sidebar links
-  github = ""
-  bitbucket = ""
-  twitter = ""
-  mastodon = ""
-  keybase = ""
-  stackoverflow = ""
-  linkedin = ""
-  youtube = ""
-  facebook = ""
-  instagram = ""
+# sidebar links
+github = ""
+bitbucket = ""
+twitter = ""
+mastodon = ""
+keybase = ""
+stackoverflow = ""
+linkedin = ""
+youtube = ""
+facebook = ""
+instagram = ""
 
-  # --- End sidebar options ---
+# --- End sidebar options ---
 
-  # If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
-  # If this item does not exist or set to false, then navigation menu links will open in the same window
-  navigationNewWindow = false
+# If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
+# If this item does not exist or set to false, then navigation menu links will open in the same window
+navigationNewWindow = false
 
-  # If false, all of blog post will appear on front page (and in pagination)
-  truncate = true
+# If false, all of blog post will appear on front page (and in pagination)
+truncate = true
 
-  # Author's name (appears in meta tags and under posts)
-  author = "Denis Proskurin"
+# Author's name (appears in meta tags and under posts)
+author = "Denis Proskurin"
 
-  # This text appears in the site header under website title
-  subtitle = "Open source, Some Code, Troubleshooting, Good Links"
+# This text appears in the site header under website title
+subtitle = "Open source, Some Code, Troubleshooting, Good Links"
 
-  # Website's default description
-  description = "Open source, Some Code, Troubleshooting, Good Links"
+# Website's default description
+description = "Open source, Some Code, Troubleshooting, Good Links"
 
-  # Search engine URL
-  searchEngineURL = "https://www.google.com/search"
+# Search engine URL
+searchEngineURL = "https://www.google.com/search"
 
-  # Text of the "Continue Reading" label. Supports markdown and inline HTML.
-  # For example, &rarr; == right arrow.
-  continueReadingText = "Читать далее &rarr;"
+# Text of the "Continue Reading" label. Supports markdown and inline HTML.
+# For example, &rarr; == right arrow.
+continueReadingText = "Читать далее &rarr;"
 
-  # Optional piwik tracking
-  # [params.analytics.piwik]
-  #  URL = "https://stats.example.com"
-  #  ID = "42"
+# Optional piwik tracking
+# [params.analytics.piwik]
+#  URL = "https://stats.example.com"
+#  ID = "42"
 
-  # Switch to true to enable RSS icon link
-  rss = true
+# Switch to true to enable RSS icon link
+rss = true
 
-  # Set to true to use a text label for RSS instead of an icon
-  # This is overwritten by the "rss" setting
-  textrss = false
+# Set to true to use a text label for RSS instead of an icon
+# This is overwritten by the "rss" setting
+textrss = false
 
-  # Populate this with your own search keywords - these will appear in the meta tags
-  # defaultKeywords = ["keyword1" , "keyword2" , "keyword3" , "keyword4"]
+# Populate this with your own search keywords - these will appear in the meta tags
+# defaultKeywords = ["keyword1" , "keyword2" , "keyword3" , "keyword4"]
 
-  # CSS override files
-  # Paths should be relative to the `static` directory
-  # customCSS = ["css/custom.css","css/custom2.css"]
-  customCSS = ["css/custom.css"]
+# CSS override files
+# Paths should be relative to the `static` directory
+# customCSS = ["css/custom.css","css/custom2.css"]
+customCSS = ["css/custom.css"]
 
-  # 404.html header and text - both support markdown
-  notFoundHeader = "There's nothing here"
+# 404.html header and text - both support markdown
+notFoundHeader = "There's nothing here"
 
-  notFoundText = """
-  Please either go back or use the navigation/sidebar menus.
-  """
+notFoundText = """
+Please either go back or use the navigation/sidebar menus.
+"""
 
-  # Set to true to hide ReadingTime on posts
-  disableReadingTime = true
+# Set to true to hide ReadingTime on posts
+disableReadingTime = true
 
-  # Set to true to disable downloading of remote Google fonts
-  disableGoogleFonts = true
+# Set to true to disable downloading of remote Google fonts
+disableGoogleFonts = true
 
-  # Remove or Set to false to use local fonts
-  # remoteFonts = false
+# Remove or Set to false to use local fonts
+# remoteFonts = false
 
-  # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
-  # fontAwesome = false
+# Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
+# fontAwesome = false
 
-  # Generate taxonomy pages
-   generateTaxonomyList = true
+# Generate taxonomy pages
+generateTaxonomyList = true
 
-  # Sort the taxonomy alphabetically.
-  # sortTaxonomyAlphabetical = true
+# Sort the taxonomy alphabetically.
+# sortTaxonomyAlphabetical = true
 
-  # Twitter card config
-  # Enable with this.
-  # twitterCardEnabled = true
-  # Don't include the @.
-  # twitterCardSite =
-  # twitterCardDomain = "parsiya.net"
-  # Don't include the @.
-  # twitterCardAuthor = "CryptoGangsta"
+# Twitter card config
+# Enable with this.
+# twitterCardEnabled = true
+# Don't include the @.
+# twitterCardSite =
+# twitterCardDomain = "parsiya.net"
+# Don't include the @.
+# twitterCardAuthor = "CryptoGangsta"
 
-  # Set to true to enable compact index. Set to false or remove to go back to classic view.
-  # compactIndex = true
+# Set to true to enable compact index. Set to false or remove to go back to classic view.
+# compactIndex = true
 
-  # Set mainSections.
-  # mainSections = ["post", "blog"]
-  # mainSections = ["post"]
+# Set mainSections.
+# mainSections = ["post", "blog"]
+# mainSections = ["post"]
 
-  # Site's custom favicon, this is a relative path to the `/static` directory
-  # favicon = "newfav.png"
+# Site's custom favicon, this is a relative path to the `/static` directory
+# favicon = "newfav.png"
 
 # Google analytics code - remove if you do not have/want Google
 # Analytics - needs JavaScript.
@@ -187,14 +187,14 @@ limit = -1
 # If navigationNewWindow (under [params]) is set to true then all links except root ("/") will open in a new window
 # If it does not exist or is set to false then links will open in the same window
 [[menu.main]]
-  Name = "Home"
-  URL = "/"
-  weight = 1
+Name = "Home"
+URL = "/"
+weight = 1
 
 [[menu.main]]
-  Name = "Posts"
-  URL = "/post/"
-  weight = 2
+Name = "Posts"
+URL = "/post/"
+weight = 2
 
 [[menu.main]]
 Name = "Resume"
@@ -202,33 +202,33 @@ URL = "/resume/"
 weight = 5
 
 [[menu.main]]
-  Name = "About"
-  URL = "/about/"
-  weight = 4
+Name = "About"
+URL = "/about/"
+weight = 4
 
 [[menu.main]]
-  Name = "Sample"
-  URL = "/sample/"
-  weight = 3
+Name = "Sample"
+URL = "/sample/"
+weight = 3
 
 
 # Sidebar menus
 # Enable with "sidebarMenuEnabled = true" under [params]
 # Header text is "sidebarMenuHeader" under [params]
 [[menu.sidebar]]
-  Name = "Posts"
-  URL = "/post/"
-  weight = 1
+Name = "Posts"
+URL = "/post/"
+weight = 1
 
 [[menu.sidebar]]
-  Name = "Сategory"
-  URL = "/categories/"
-  weight = 2
+Name = "Сategory"
+URL = "/categories/"
+weight = 2
 
 [[menu.sidebar]]
-  Name = "Tags"
-  URL = "/tags/"
-  weight = 3
+Name = "Tags"
+URL = "/tags/"
+weight = 3
 
 
 # Disqus shortcode
