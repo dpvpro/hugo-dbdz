@@ -24,9 +24,10 @@ startLevel = 1
 # set the Chroma highlighting options
 # https://gohugo.io/getting-started/configuration-markup/#highlight
 [markup.highlight]
-# style = "solarized-dark"
+style = "catppuccin-frappe"
+# style = "catppuccin-macchiato"
+# style = "catppuccin-latte"
 # style = "tango"
-style = "catppuccin-latte"
 
 
 [params]
@@ -186,46 +187,47 @@ limit = -1
 # Menu
 # If navigationNewWindow (under [params]) is set to true then all links except root ("/") will open in a new window
 # If it does not exist or is set to false then links will open in the same window
-[[menu.main]]
+[menus]
+[[menus.main]]
 Name = "Home"
 URL = "/"
 weight = 1
 
-[[menu.main]]
+[[menus.main]]
 Name = "Posts"
 URL = "/post/"
 weight = 2
 
-[[menu.main]]
+[[menus.main]]
+Name = "Sample"
+URL = "/sample/"
+weight = 3
+
+[[menus.main]]
 Name = "Resume"
 URL = "/resume/"
 weight = 5
 
-[[menu.main]]
+[[menus.main]]
 Name = "About"
 URL = "/about/"
 weight = 4
-
-[[menu.main]]
-Name = "Sample"
-URL = "/sample/"
-weight = 3
 
 
 # Sidebar menus
 # Enable with "sidebarMenuEnabled = true" under [params]
 # Header text is "sidebarMenuHeader" under [params]
-[[menu.sidebar]]
+[[menus.sidebar]]
 Name = "Posts"
 URL = "/post/"
 weight = 1
 
-[[menu.sidebar]]
+[[menus.sidebar]]
 Name = "Сategory"
 URL = "/categories/"
 weight = 2
 
-[[menu.sidebar]]
+[[menus.sidebar]]
 Name = "Tags"
 URL = "/tags/"
 weight = 3
