@@ -158,7 +158,7 @@ generateTaxonomyList = true
 # mainSections = ["post"]
 
 # Site's custom favicon, this is a relative path to the `/static` directory
-# favicon = "newfav.png"
+# favicon = "favicon.png"
 
 # Google analytics code - remove if you do not have/want Google
 # Analytics - needs JavaScript.
