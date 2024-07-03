@@ -49,12 +49,14 @@ sudo apt-get install efibootmgr
 sudo gdisk -l /dev/sda
 ```
 
+Конечно же вместо `/dev/sda` подставьте ваш диск. У вас он может быть другим.
+
 Монтируем файловую систему. В данному случае, `root` у нас в `/dev/sda2`, `efi` раздел в `/dev/sda1`:
 
 ```bash
-sudo mkdir -p /mnt/system
-sudo mount /dev/sda2 /mnt/system
-sudo mount /dev/sda1 /mnt/system/efi
+sudo mkdir -p /mnt
+sudo mount /dev/sda2 /mnt
+sudo mount /dev/sda1 /mnt/efi
 ```
 
 Прописываем пункт в меню **UEFI**:
@@ -77,11 +79,11 @@ sudo apt-get install grub-efi-amd64
 Устанавливаем загрузчик на диск:
 
 ```bash
-sudo  grub-install --root-directory=/mnt/system --boot-directory=/mnt/system/boot --efi-directory=/mnt/system/efi --bootloader-id=Ubuntu --target=x86_64-efi --recheck  --debug /dev/sda
+sudo  grub-install --root-directory=/mnt --boot-directory=/mnt/boot --efi-directory=/mnt/efi --bootloader-id=Ubuntu --target=x86_64-efi --recheck  --debug /dev/sda
 ```
 
 Далее прописано обновить меню **Grub**. В оригинале написано не правильно. Привожу правильную команду:
 
 ```bash
-sudo grub-mkconfig -o /mnt/system/boot/grub/grub.cfg
+sudo grub-mkconfig -o /mnt/boot/grub/grub.cfg
 ```
