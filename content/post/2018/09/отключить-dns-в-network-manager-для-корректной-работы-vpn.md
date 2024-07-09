@@ -8,7 +8,7 @@ tags:
 ---
 
 После настройки openvpn клиента, блокировки Роскомнадзора все равно срабатывали.
-Выяснилось что менеджер сетевых соединений Network Manager в Ubuntu использует свой встроенный dns.
+Выяснилось что менеджер сетевых соединений **Network Manager** в **Ubuntu** использует свой встроенный `dns`.
 
 <!--more-->
 
@@ -20,6 +20,6 @@ tags:
 
 `#dns=dnsmasq`
 
-Сделать перезапуск Network Manager
+Сделать перезапуск **Network Manager**:
 
 `sudo systemctl restart NetworkManager`
