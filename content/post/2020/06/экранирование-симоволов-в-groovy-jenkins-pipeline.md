@@ -50,6 +50,4 @@ def pR = sh(script: 'cd $IT; PLAN=$(terragrunt plan --terragrunt-source-update |
 
 ```
 
-https://stackoverflow.com/questions/51659231/groovy-escape-double-quoted/51662852
-
-https://stackoverflow.com/questions/59171237/jenkins-script-console-can-i-use-jenkins-pipeline-dsl-in-script-console
+Использованная литература - [Stackoverflow One](https://stackoverflow.com/questions/51659231/groovy-escape-double-quoted/51662852), [Stackoverflow Second](https://stackoverflow.com/questions/59171237/jenkins-script-console-can-i-use-jenkins-pipeline-dsl-in-script-console)
