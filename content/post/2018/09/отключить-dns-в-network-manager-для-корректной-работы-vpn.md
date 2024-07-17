@@ -1,5 +1,5 @@
 ---
-title: "Отключить dnsmask в Network Manager для корректной работы VPN"
+title: "Отключить Dnsmask в Network Manager для корректной работы VPN"
 date: "2018-09-24"
 categories:
   - "network"
