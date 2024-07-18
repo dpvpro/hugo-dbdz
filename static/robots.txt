@@ -1,2 +1,4 @@
 User-agent: *
 Sitemap: https://daybydayz.ru/sitemap.xml
+
+Disallow: /page/
