@@ -1,5 +1,5 @@
 ---
-title: Отладка сборки python библиотеки на Manjaro Linux
+title: Отладка сборки Python библиотеки на Manjaro Linux
 date: 2024-05-09T01:55:26+03:00
 # description: "Отладка сборки python библиотеки на Manjaro Linux"
 categories:
