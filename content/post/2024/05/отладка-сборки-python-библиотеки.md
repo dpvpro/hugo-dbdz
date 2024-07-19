@@ -146,8 +146,10 @@ pdb.set_trace()
 
 Подробно можно увидеть если запустить следующие команды:
 
-`python -m sysconfig | grep script`
-`test-env/bin/python -m sysconfig | grep script`
+```bash
+python -m sysconfig | grep script
+test-env/bin/python -m sysconfig | grep script
+```
 
 Я вспомнил что у меня есть тестовый стенд, и попробовал воспроизвести проблему на нём. При установке пакета `python-jarowinkler` проблем не было. Значит есть разница в системном окружении, понял я.
 
