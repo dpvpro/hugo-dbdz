@@ -16,7 +16,7 @@ tags:
   - клонирование диска dd linux
   - dd clone
 ---
-#### Резервное копирование
+#### Полная копия (зеркалирование)
 
 `sudo rsync --delete -ravn --stats /media/veracrypt1/ /media/veracrypt2/`
 
