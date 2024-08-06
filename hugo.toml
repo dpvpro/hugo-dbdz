@@ -24,9 +24,9 @@ startLevel = 1
 # set the Chroma highlighting options
 # https://gohugo.io/getting-started/configuration-markup/#highlight
 [markup.highlight]
-style = "catppuccin-frappe"
+# style = "catppuccin-frappe"
 # style = "catppuccin-macchiato"
-# style = "catppuccin-latte"
+style = "catppuccin-latte"
 # style = "tango"
 
 
