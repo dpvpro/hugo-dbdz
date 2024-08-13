@@ -1,5 +1,5 @@
 ---
-title: "Работа с частными репозиториями из Goland (Golang) 2"
+title: "Работа с частными репозиториями в Golang - Импорты"
 date: "2023-04-27T06:48:00+03:00"
 categories:
   - "golang"
@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Golang при работе с внешними зависимостями по умолчанию работает с `https` протколом. Поэтому с настройками по умолчанию возникает ошибка ниже:
+**Golang** при работе с внешними зависимостями по умолчанию работает с `https` протколом. Поэтому с настройками по умолчанию возникает ошибка ниже:
 
 ```go
 go: gitlab.space.team/dev/spacevm-go@v0.0.0-20230427205557-c59c016940d9: invalid version: git ls-remote -q origin in
@@ -30,6 +30,8 @@ If this is a private repository, see https://golang.org/doc/faq#git_https for ad
 machine gitlab.space.team login USERNAME password PASSWORD
 ```
 
+---
+
 При возникновении следующей ошибки:
 
 ```go
@@ -41,6 +43,8 @@ go: terraform-provider-spacevm imports
 
 необходимо в самописном модуле который импортируем и который расположен в приватном репозитории прописать правильное именование.
 
-Вместо `module spacevm-go` необходимо писать полный путь до приватного модуля `module gitlab.space.team/dev/spacevm-go`.
+Вместо `module spacevm-go` необходимо писать полный идентификатор приватного модуля `module gitlab.space.team/dev/spacevm-go`.
+
+`gitlab.space.team/dev/spacevm-go` — это глобально уникальный идентификатор модуля и одновременно URL, по которому он должен быть доступен (за минусом префикса https://).
 
 ![](/images/2023/04/gomod.png)
