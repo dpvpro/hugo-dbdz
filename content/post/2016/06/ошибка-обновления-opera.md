@@ -1,5 +1,5 @@
 ---
-title: 'Ошибка обновления Opera "Sub-process /usr/bin/dpkg returned an error code (1)"'
+title: 'Ошибка обновления Opera'
 date: "2016-06-14"
 categories:
   - "linux"
@@ -9,7 +9,7 @@ tags:
 
 <!--more-->
 
-После установки браузера Opera на Ubuntu, при последующем обновлении, возникает ошибка `Sub-process /usr/bin/dpkg returned an error code (1)`.
+После установки браузера Opera на Ubuntu, при последующем обновлении, возникает ошибка:
 
 ```bash
 22:25:29 [user@host ~]$ sudo apt upgrade
@@ -55,7 +55,13 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 ```
 
-Для исправления идем в директорию `/var/lib/dpkg/info` и удаляем все что относится к пакету oper'ы и обновляемся.
+Для исправления идем в директорию:
+
+```bash
+cd /var/lib/dpkg/info
+```
+
+Удаляем все что относится к пакету Oper'ы и обновляемся:
 
 ```bash
 sudo rm /var/lib/dpkg/info/opera-stable.*
