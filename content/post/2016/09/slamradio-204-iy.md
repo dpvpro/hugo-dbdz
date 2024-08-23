@@ -1,5 +1,6 @@
 ---
 title: "SlamRadio - 204 - I/Y"
+slug: slamradio-204-iy
 date: "2016-09-30"
 categories:
   - "music"
@@ -8,5 +9,4 @@ tags:
 ---
 
 <!--more-->
-
 {{< soundcloud-track 279802448 >}}
