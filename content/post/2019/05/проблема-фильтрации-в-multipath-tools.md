@@ -17,7 +17,6 @@ tags:
 
 ```bash
 find_multipaths "no"
-
 ```
 
 Полный конфиг multipath.conf:
