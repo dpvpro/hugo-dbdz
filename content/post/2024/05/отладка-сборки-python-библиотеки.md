@@ -9,7 +9,6 @@ tags:
   - debug python library
   - pytest
 ---
-
 При очередном обновлении **Manjaro**, обновлении двух `python` библиотек `python-jarowinkler` и `python-async_generator` завершилось ошибками.
 
 Библиотеку `python-async_generator` я удалил, потому что она выглядела старой и уже не поддерживаемой. На библиотеке `python-jarowinkler` я задержался, так как она выглядела поддерживаемой.
@@ -60,14 +59,14 @@ tests/test_hypothesis.py       66      0   100%
 -----------------------------------------------
 TOTAL                         116      4    97%
 
-==================================== short test summary info ===========================
+===================== short test summary info =====================
 FAILED jarowinkler/__init__.py::ruff - FileNotFoundError: /home/dp/.local/bin/ruff
 FAILED jarowinkler/__init__.py::ruff::format - FileNotFoundError: /home/dp/.local/bin/ruff
 FAILED tests/test_JaroWinkler.py::ruff - FileNotFoundError: /home/dp/.local/bin/ruff
 FAILED tests/test_JaroWinkler.py::ruff::format - FileNotFoundError: /home/dp/.local/bin/ruff
 FAILED tests/test_hypothesis.py::ruff - FileNotFoundError: /home/dp/.local/bin/ruff
 FAILED tests/test_hypothesis.py::ruff::format - FileNotFoundError: /home/dp/.local/bin/ruff
-================================== 6 failed, 5 passed in 7.69s ==========================
+==================== 6 failed, 5 passed in 7.69s ==================
 ==> ERROR: A failure occurred in check().
     Aborting...
  -> error making: python-jarowinkler
@@ -135,7 +134,7 @@ package() {
 python -m pytest tests/test_hypothesis.py
 ```
 
-**_Стало понятно что где то есть какая то разница, но как её определить?_**
+**_Стало понятно, что где то есть какая то разница, но как её определить?_**
 
 Использовал отладку с добавлением в файл `/usr/lib/python3.12/site-packages/ruff/__main__.py` точек останова:
 
@@ -185,7 +184,7 @@ yay -Rnsu python-pytest-ruff python-ruff ruff
 ```python
 ---------- coverage: platform linux, python 3.12.3-final-0 -----------
 Name                                             Stmts   Miss Branch BrPart  Cover
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------
 async_generator/__init__.py                          4      0      0      0 100.0%
 async_generator/_impl.py                           205     22     64      5  87.0%
 async_generator/_tests/__init__.py                   0      0      0      0 100.0%
@@ -197,14 +196,14 @@ async_generator/_version.py                          1      0      0      0 100.
 ----------------------------------------------------------------------------------
 TOTAL                                             1026     29    344     14  96.3%
 
-================================================================= mypy =================================================================
+======================= mypy ======================
 Found 9 errors in 3 files (checked 10 source files)
-======================================================= short test summary info ========================================================
+============== short test summary info ============
 FAILED async_generator/__init__.py::mypy-status
 FAILED async_generator/_impl.py::mypy
 FAILED docs/source/conf.py::mypy
 FAILED setup.py::mypy
-============================================== 4 failed, 50 passed, 48 warnings in 36.01s ==============================================
+==== 4 failed, 50 passed, 48 warnings in 36.01s ===
 ==> ERROR: A failure occurred in check().
     Aborting...
  -> error making: python-async_generator
