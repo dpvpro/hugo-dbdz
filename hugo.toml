@@ -7,7 +7,8 @@ title = "Day by Day, Site by Site"
 theme = "hugo-octopress"
 
 # Number of blog posts in each pagination page
-paginate = 6
+[pagination]
+pagerSize = 7
 
 [permalinks]
 # change the post URL to look like the old ones,
@@ -17,17 +18,24 @@ post = "/entry/:year-:month-:day-:slug/"
 # note = "/note/:filename/"
 
 [markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark] 
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+    
   # Default is startLevel 2 and endLevel 3, we want to render every heading
-[markup.tableOfContents]
-endLevel = 8
-startLevel = 1
-# set the Chroma highlighting options
-# https://gohugo.io/getting-started/configuration-markup/#highlight
-[markup.highlight]
-# style = "catppuccin-frappe"
-# style = "catppuccin-macchiato"
-style = "catppuccin-latte"
-# style = "tango"
+  [markup.tableOfContents]
+    endLevel = 8
+   	startLevel = 1
+  # set the Chroma highlighting options
+  # https://gohugo.io/getting-started/configuration-markup/#highlight
+  [markup.highlight]
+    # style = "catppuccin-frappe"
+    # style = "catppuccin-macchiato"
+    style = "catppuccin-latte"
+    # style = "tango"
 
 
 [params]
