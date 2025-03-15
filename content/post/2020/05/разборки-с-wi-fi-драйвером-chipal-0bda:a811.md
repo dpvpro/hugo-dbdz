@@ -8,6 +8,7 @@ tags:
   - "wi-fi driver 0bda:a811"
 ---
 Имею Wi-Fi адаптер купленный на Алиэкспрес под именем `CHIPAL 802.11AC 600 Мбит/с`.
+
 ![](/images/2020/05/chipal.png)
 
 Еще на этапе покупки были риски, что под `Linux` адаптер не работает. Но в комментариях было сказано что под `Linux` кто то работал с ним.
@@ -17,9 +18,10 @@ tags:
 <!--more-->
 
 Определяем ID устройства командой `lsusb`
+
 ![](/images/2020/05/lsusb.png)
 
-Ищем **`ID** устройства в **Google**, находим эту ссылку:
+Ищем **ID** устройства в **Google**, находим эту ссылку:
 
 [Visible 0bda:a811 Realtek WiFi adapter and device driver not connected](https://askubuntu.com/questions/1035069/visible-0bdaa811-realtek-wifi-adapter-and-i-believe-installed-device-driver-n)
 
