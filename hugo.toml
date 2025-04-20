@@ -191,6 +191,9 @@ generateTaxonomyList = true
 [services.rss]
 limit = -1
 
+# [services.disqus]
+# shortname = "danwerspb"
+
 
 # Menu
 # If navigationNewWindow (under [params]) is set to true then all links except root ("/") will open in a new window
@@ -239,9 +242,3 @@ weight = 2
 Name = "Tags"
 URL = "/tags/"
 weight = 3
-
-
-# Disqus shortcode
-# Disable comments for any individual post by adding "comments: false" in its frontmatter
-# Note it's not under [params] anymore
-# disqusShortname = "Your disqus shortname"
