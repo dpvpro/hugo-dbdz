@@ -56,11 +56,11 @@ sidebarText = """
 
 Телеграмм - dpvpro
 
-Github - https://github.com/dpvpro
+Github - [dpvpro](https://github.com/dpvpro)
 
-Google - [https://www.google.com](https://www.google.com)
+Google - [google.com](https://www.google.com)
 
-Yandex - [https://ya.ru](https://ya.ru)
+Yandex - [yandex.ru](https://ya.ru)
 
 """
 
@@ -136,13 +136,13 @@ Please either go back or use the navigation/sidebar menus.
 disableReadingTime = true
 
 # Set to true to disable downloading of remote Google fonts
-disableGoogleFonts = true
+disableGoogleFonts = false
 
 # Remove or Set to false to use local fonts
-# remoteFonts = false
+remoteFonts = true
 
 # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
-# fontAwesome = false
+fontAwesome = false
 
 # Generate taxonomy pages
 generateTaxonomyList = true
