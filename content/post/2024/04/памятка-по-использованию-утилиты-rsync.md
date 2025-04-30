@@ -1,7 +1,8 @@
 ---
 title: Памятка по использование утилиты Rsync
 description: Памятка по использование утилиты Rsync. Резервное копирование в Linux.
-date: 2024-04-16T21:12:00+03:00
+date: 2024-04-16
+lastmod: 2024-12-27
 categories:
   - linux
 tags:
