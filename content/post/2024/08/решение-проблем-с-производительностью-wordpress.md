@@ -2,7 +2,7 @@
 title: Решение проблем с производительностью Wordpress
 date: 2024-08-13T06:28:26+03:00
 draft: false
-description: Решение проблем с производительностью PHP-приложений
+description: Решение проблем с производительностью PHP-приложений.
 categories:
   - debug
 tags:
