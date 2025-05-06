@@ -18,7 +18,7 @@ tags:
 
 Утилита `virt-sparsify` находится в пакете `guestfs-tools`. Пакет должен быть установлен в хостовой системе.
 
-Утилита `qemu-img` находтися в пакете `qemu-img` в Arch Linux и в пакете `qemu-utils` в Debian Linux.
+Утилита `qemu-img` находится в пакете `qemu-img` в Arch Linux и в пакете `qemu-utils` в Debian Linux.
 
 <!--more-->
 
