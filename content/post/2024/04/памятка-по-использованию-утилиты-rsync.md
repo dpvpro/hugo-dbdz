@@ -2,7 +2,7 @@
 title: Памятка по использование утилиты Rsync
 description: Памятка по использование утилиты Rsync. Резервное копирование в Linux.
 date: 2024-04-16
-lastmod: 2024-12-27
+lastmod: 2025-05-16
 categories:
   - linux
 tags:
@@ -17,7 +17,8 @@ tags:
   - клонирование диска dd linux
   - dd clone
 ---
-#### Полная копия (зеркалирование)
+
+#### Резервное копирование (зеркалирование)
 
 `sudo rsync --delete -ravn --stats /media/veracrypt1/ /media/veracrypt2/`
 
@@ -57,11 +58,11 @@ tags:
 
 *tar.bz2:*
 
-`sudo tar -cvjpf /mnt/matrix2/system.tar.bz2 --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys --exclude=/media --exclude=/nfs --exclude=/run --exclude=/tmp --exclude=.cache --exclude=/home /`
+`sudo tar -cvjpf /mnt/matrix2/system.tar.bz2 --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys --exclude=/media --exclude=/nfs --exclude=/run --exclude=/tmp --exclude=.cache --exclude=/home --exclude=/var/tmp /`
 
 *tar:*
 
-`sudo tar -cvpf /mnt/matrix2/system.tar --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys --exclude=/media --exclude=/nfs --exclude=/run --exclude=/tmp --exclude=.cache --exclude=/home /`
+`sudo tar -cvpf /mnt/matrix2/system.tar --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys --exclude=/media --exclude=/nfs --exclude=/run --exclude=/tmp --exclude=.cache --exclude=/home --exclude=/var/tmp /`
 
 Что, собственно, в ней заключено?
 
@@ -149,12 +150,20 @@ https://www.baeldung.com/linux/clone-space-in-use-from-disk
 
 #### Резервная копия HDD to HHD для Ext4/Btrfs
 
-`time sudo rsync -axHAXSvn --delete --info=progress2 /mnt/bublick/ /run/media/dp/test/`
+`time sudo ionice -c idle rsync -axHAXSvn --delete --info=progress2 /mnt/bublick/ /run/media/dp/matrix2/`
 
-Ключ `-n` означает тестовый запуск, без выполения реальных действий. Необходимо убрать его при реальном использовании.
+Ключ `-n` означает тестовый запуск, без выполнения реальных действий. Необходимо убрать его при реальном использовании.
 
-У **VeraCrypt** снять опцию "Оставлять время изменения контейнера неизменным" что бы у контейнера tracey менялась дата изменения и он входил в набор синхронизируемых файлов.
+> Не забыть у **VeraCrypt** снять опцию "Оставлять время изменения контейнера неизменным" что бы у зашифрованного контейнера менялась дата изменения и он входил в набор синхронизируемых файлов.
+
+> Так как я перешел на шифрование контейнера с использованием LUKS(dm-crypt), то проблема с датами как у **VeraCrypt** не актуальна. Контейнер корректно помечается временем при записи в него.
 
 #### Архивация скрытых файлов и директорий домашнего каталога
 
 `tar cvf lan-lucky.home.tar --exclude=.cache ~/.[^.]*`
+
+#### Аналог scp для rsync c ограничением скорости загрузки, поддержкой докачки, и соединения по не стандартному порту
+
+`rsync -v --bwlimit=5M --partial --progress -e 'ssh -p 10531' debian-work.qcow2 dp@185.51.XX.XX:/mnt/bublick/soft/vm/`
+
+`rsync -avn --delete --progress -e 'ssh -p 10531' ~/Code/ dp@83.243.xx.xxx:~/Code/`
