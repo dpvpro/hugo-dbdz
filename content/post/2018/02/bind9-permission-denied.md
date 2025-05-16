@@ -1,5 +1,5 @@
 ---
-title: 'Ошибка "permission denied" в Bind9'
+title: 'Ошибка "Permission denied" в Bind9'
 date: "2018-02-12"
 categories:
   - "linux"
