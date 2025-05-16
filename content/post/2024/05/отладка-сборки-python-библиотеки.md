@@ -1,6 +1,7 @@
 ---
 title: Отладка сборки Python библиотеки на Manjaro Linux
 date: 2024-05-09T01:55:26+03:00
+lastmod: 2025-05-16
 # description: Отладка сборки python библиотеки на Manjaro Linux
 categories:
   - python
@@ -21,30 +22,6 @@ tags:
 
 При сборке возникала проблема:
 ```python
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-    def find_ruff_bin() -> str:
-        """Return the ruff binary path."""
-
-        ruff_exe = "ruff" + sysconfig.get_config_var("EXE")
-
-        path = os.path.join(sysconfig.get_path("scripts"), ruff_exe)
-        if os.path.isfile(path):
-            return path
-
-        if sys.version_info >= (3, 10):
-            user_scheme = sysconfig.get_preferred_scheme("user")
-        elif os.name == "nt":
-            user_scheme = "nt_user"
-        elif sys.platform == "darwin" and sys._framework:
-            user_scheme = "osx_framework_user"
-        else:
-            user_scheme = "posix_user"
-
-        path = os.path.join(sysconfig.get_path("scripts", scheme=user_scheme), ruff_exe)
-        if os.path.isfile(path):
-            return path
-
 >       raise FileNotFoundError(path)
 E       FileNotFoundError: /home/dp/.local/bin/ruff
 
@@ -72,7 +49,7 @@ FAILED tests/test_hypothesis.py::ruff::format - FileNotFoundError: /home/dp/.loc
  -> error making: python-jarowinkler
 ```
 
-То есть тесты не находили утилиту `ruff` по пути `/home/dp/.local/bin/`.
+То есть тесты не находили утилиту `ruff` по пути `/home/dp/.local/bin/`. `Ruff` это очень быстрый линтер и инструмент для проверки форматирования кода `python`. 
 
 Совершенно не понятно было почему брался этот путь, а не общесистемный.
 
@@ -152,11 +129,11 @@ python -m sysconfig | grep script
 test-env/bin/python -m sysconfig | grep script
 ```
 
-Я вспомнил что у меня есть тестовый стенд, и попробовал воспроизвести проблему на нём. При установке пакета `python-jarowinkler` проблем не было. Значит есть разница в системном окружении, понял я.
+Я вспомнил что у меня есть тестовый стенд, и попробовал воспроизвести проблему на нём. При установке пакета `python-jarowinkler` проблем не было.
 
-Было установленно что есть разница в пакетах `ruff`. К слову, `ruff` это очень быстрый линтер и инструмент для проверки форматирования кода `python`.
+Очевидно что есть разница в системном окружении.
 
-На проблемной системе были внешние пакеты связанные с `ruff`:
+В итоге было установленно что есть разница в пакетах `ruff`. На проблемной системе были внешние пакеты связанные с `ruff`:
 
 ```bash
 > yay -Qs ruff
@@ -177,7 +154,7 @@ yay -Rnsu python-pytest-ruff python-ruff ruff
 
 Сборка начала проходить `yay -S python-jarowinkler`.
 
-Я вспомнил про первый проблемный пакет - `python-async_generator`. Скорее всего с ним такая же история.
+Тут я вспомнил про первый проблемный пакет - `python-async_generator`. Скорее всего с ним такая же история.
 
 При сборке данного пакета возникала следующая ошибка:
 
