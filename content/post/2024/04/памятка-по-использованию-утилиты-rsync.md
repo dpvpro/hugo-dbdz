@@ -128,7 +128,9 @@ tags:
 
 Этот метод актуален если файловая система где создается результирующий файл поддерживает работу со `sparse` файлами.
 
-https://www.baeldung.com/linux/clone-space-in-use-from-disk
+<!---
+Info was taken from https://www.baeldung.com/linux/clone-space-in-use-from-disk
+-->
 
 ### Резервная копия HDD to HHD для ExFat
 
