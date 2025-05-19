@@ -1,5 +1,5 @@
 ---
-title: Отладка сборки Python библиотеки на Manjaro Linux
+title: Отладка сборки Python библиотек
 date: 2024-05-09T01:55:26+03:00
 lastmod: 2025-05-16
 # description: Отладка сборки python библиотеки на Manjaro Linux
@@ -10,11 +10,11 @@ tags:
   - debug python library
   - pytest
 ---
-При очередном обновлении *Manjaro*, обновлении двух `python` библиотек `python-jarowinkler` и `python-async_generator` завершилось ошибками.
+При очередном обновлении *Manjaro*, обновлении двух python библиотек `python-jarowinkler` и `python-async_generator` завершилось ошибками.
 
 Библиотеку `python-async_generator` я удалил, потому что она выглядела старой и уже не поддерживаемой. На библиотеке `python-jarowinkler` я задержался, так как она выглядела поддерживаемой.
 
-Было интересно понять где проблема: в недавнем переход *Manjaro* на новый выпуск `python312` или проблема кроется где то еще.
+Было интересно понять где проблема: в недавнем переход *Manjaro* на новый выпуск Python 3.12 или проблема кроется где то еще.
 
 <!--more-->
 
@@ -49,7 +49,7 @@ FAILED tests/test_hypothesis.py::ruff::format - FileNotFoundError: /home/dp/.loc
  -> error making: python-jarowinkler
 ```
 
-То есть тесты не находили утилиту `ruff` по пути `/home/dp/.local/bin/`. `Ruff` это очень быстрый линтер и инструмент для проверки форматирования кода `python`. 
+Тесты не находили утилиту `ruff` по пути `/home/dp/.local/bin/`. `Ruff` это линтер и инструмент для проверки форматирования кода `python`. 
 
 Совершенно не понятно было почему брался этот путь, а не общесистемный.
 
