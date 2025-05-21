@@ -1,6 +1,7 @@
 ---
 title: "Работа с частными репозиториями в Golang - Goinsecure"
 date: "2022-01-13T06:48:00+03:00"
+description: Опция goinsecure в Golang.
 categories:
   - "golang"
 tags:
@@ -11,17 +12,17 @@ tags:
   - "goinsecure"
 ---
 
-Язык программирования **Golang** и линейка продуктов **JetBrains**, куда входят **Goland** и **Pycharm**, ориентированны на работу с внешними сервисами, такими как **Github**.
-**Github** использует `https` протокол.  В менеджере пакетов **Golang**  по умолчанию настроена работа с использованием `https` протокола.
+Язык программирования Golang и линейка продуктов JetBrains, куда входят Goland и Pycharm, ориентированны на работу с внешними сервисами, такими как Github.
+Github использует `https` протокол.  В менеджере пакетов Golang  по умолчанию настроена работа с использованием `https` протокола.
 
 <!--more-->
 
-Во множестве организаций использутся внутренние репозитории кода. У нас код хостится на внутреннем сервере **Gitlab**.
-При этом `https` не используется, используется `http`. При импорте модулей в пакет при разработке на **Golang** возникает проблема:
+Во множестве организаций использутся внутренние репозитории кода. У нас код хостится на внутреннем сервере Gitlab.
+При этом `https` не используется, используется `http`. При импорте модулей в пакет при разработке на Golang возникает проблема:
 
 ![](/images/2022/01/golang_https1.png)
 
-При попытке импорта, **Goland** пишет:
+При попытке импорта, Goland пишет:
 
 ```go
 go: finding module for package gitlab.bazalt.team/dev/veil-api-client-go/veil
@@ -31,7 +32,7 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 Что делал что бы побороть ошибку:
 
-- запилил самоподписанные сертфикаты для **Gitlab**, не помогло:
+- запилил самоподписанные сертфикаты для Gitlab, не помогло:
 
 ```go
 go: finding module for package gitlab.bazalt.team/dev/veil-api-client-go/veil
@@ -44,7 +45,7 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 
 - поспал, начал читать разное про модули, набрел на ["Go Modules Reference"](https://go.dev/ref/mod#environment-variables), в итоге помогло...
 
-В настройках проекта **Goland** устанавливаем переменные с исключениями из внутренних серверов:
+В настройках проекта Goland устанавливаем переменные с исключениями из внутренних серверов:
 
 ![](/images/2022/01/golang_settings.png)
 
@@ -54,6 +55,6 @@ gitlab.bazalt.team/dev/veil-api-client-go/veil: cannot find module providing pac
 go clean -modcache
 ```
 
-Может потребоваться перезапуск **Goland**. Модули нормально импортировались:
+Может потребоваться перезапуск Goland. Модули нормально импортировались:
 
 ![](/images/2022/01/golang_https2.png)
