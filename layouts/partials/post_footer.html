@@ -2,7 +2,7 @@
   - different from page footer which is in footer.html partial -->
 
 <footer>
-  <hr class="dashed">  
+  <hr class="dashed">
   <p class="meta">
     {{ if isset .Params "tags" }}
       <span class="categories">
@@ -22,35 +22,36 @@
        This does not happen with InSection ones.
        For more info about template variables: https://gohugo.io/templates/variables/ -->
 
-  <p class="meta">
-
+  <p class="meta"> Предыдущее:
     {{ with .NextInSection }}
-      <a class="basic-alignment left" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
+      <a class="basic-alignment" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
     {{ end }}
-    
-    {{ with .PrevInSection }}
-        <a class="basic-alignment right" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
-    {{ end }}
-
   </p>
+
+  <p class="meta"> Следующее:
+    {{ with .PrevInSection }}
+        <a class="basic-alignment" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
+    {{ end }}
+  </p>
+
   {{ if .Site.Config.Services.Disqus.Shortname }}
     {{ if not (eq .Params.comments false) }}
       {{ template "_internal/disqus.html" . }}
     {{ end }}
   {{ end }}
-  
+
   <div id="anycomment-app"></div>
   <script>
-  AnyComment = window.AnyComment || []; AnyComment.Comments = [];
-  AnyComment.Comments.push({
-      "root": "anycomment-app",
-      "app_id": 7091,
-      "language": "ru"
-  })
-  var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-  s.src = "https://widget.anycomment.io/comment/embed.js";
-  var sa = document.getElementsByTagName("script")[0];
-  sa.parentNode.insertBefore(s, s.nextSibling);
+    AnyComment = window.AnyComment || []; AnyComment.Comments = [];
+    AnyComment.Comments.push({
+        "root": "anycomment-app",
+        "app_id": 7091,
+        "language": "ru"
+    })
+    var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+    s.src = "https://widget.anycomment.io/comment/embed.js";
+    var sa = document.getElementsByTagName("script")[0];
+    sa.parentNode.insertBefore(s, s.nextSibling);
   </script>
   
 </footer>
