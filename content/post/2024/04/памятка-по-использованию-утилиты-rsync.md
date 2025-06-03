@@ -2,7 +2,7 @@
 title: Памятка по использование утилиты Rsync
 description: Памятка по использование утилиты Rsync. Резервное копирование в Linux.
 date: 2024-04-16
-lastmod: 2025-05-16
+lastmod: 2025-06-03
 categories:
   - linux
 tags:
@@ -110,7 +110,7 @@ tags:
 
 `dd if=/mnt/apriel/lan-zotac.windows11.sda.dd of=/dev/sda bs=8M conv=noerror status=progress`
 
-#### C использованием опции "sparse" утилиты "dd":
+#### C использованием опции "sparse":
 
 Это самый интересный режим, потому как позволят значительно уменьшить время клонирования больших разделов или дисков. При использовании опции `sparse` будут использованны только сектора с данными с диска источника, пустое пространство будет исключено.
 
@@ -124,7 +124,7 @@ tags:
 
 `dd if=/mnt/apriel/lan-zotac.archlinux.sda.sparse.dd of=/dev/sda bs=8M status=progress`
 
-Этот метод актуален если файловая система где создается результирующий файл поддерживает работу со `sparse` файлами.
+Этот метод актуален если файловая система где создается результирующий файл поддерживает работу со `sparse` файлами. Например `btrfs`.
 
 <!---
 Info was taken from https://www.baeldung.com/linux/clone-space-in-use-from-disk
