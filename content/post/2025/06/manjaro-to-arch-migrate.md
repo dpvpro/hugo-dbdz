@@ -6,10 +6,8 @@ draft:  false
 categories:
   -  linux
 tags:
-  - arch linux
-  - manjaro linux
-  - migrate from arch linux to manjaro linux
-  - переход с arch linux на manjaro linux
+  - migrate from manjaro linux to arch linux
+  - переход с manjaro linux на arch linux
 ---
 
 Давно хотел сделать данное действие что бы наконец-таки сказать **"BTW, I use Arch"**. Не буду подробно описывать свои шаги, скажу лишь что в процессе переход использовались две статьи, и я могу подтвердить что с помощью них я удачно осуществил миграцию:
