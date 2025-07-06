@@ -4,7 +4,8 @@ date: 2025-07-05
 description: Отладка высокой загрузки процессора.
 draft:  false
 categories:
-  -  linux
+  - linux
+  - debug
 tags:
   - high cpu usage
 ---
