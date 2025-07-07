@@ -53,12 +53,12 @@ sudo gdisk -l /dev/sda
 
 Конечно же вместо `/dev/sda` подставьте ваш диск. У вас он может быть другим.
 
-Монтируем файловую систему. В моём случае, `root` в `/dev/sda2`, `efi` раздел в `/dev/sda1`:
+Монтируем файловую систему. В моём случае, `root` в `/dev/sda2`, `boot` раздел в `/dev/sda1`:
 
 ```bash
 sudo mkdir -p /mnt
 sudo mount /dev/sda2 /mnt
-sudo mount /dev/sda1 /mnt/efi
+sudo mount /dev/sda1 /mnt/boot
 ```
 
 Прописываем пункт в меню **UEFI**:
@@ -84,7 +84,7 @@ sudo apt-get install grub-efi-amd64
 
 ```bash
 sudo grub-install --root-directory=/mnt --boot-directory=/mnt/boot \
---efi-directory=/mnt/efi --target=x86_64-efi --bootloader-id=Ubuntu \
+--efi-directory=/mnt/boot --target=x86_64-efi --bootloader-id=Ubuntu \
 --recheck --debug /dev/sda
 ```
 
