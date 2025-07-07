@@ -21,11 +21,13 @@ tags:
 
 При попытке сделать загрузочную флэшку, сделал процедуру установки загрузчка **Grub** на флэшку. В результате поменялась информация и в загрузочном меню **UEFI**. Видно что то не учел. Система перестал грузиться с основного жесткого диск, только с флэшки. Для исправления загрузки не подходил способ для восстановления загрузчика **BIOS** систем.
 
-Данный способ изначально для **Ubuntu Linux**, но должен подойти для любого дистрибутива.
 
-> [Ubuntu 14.04 UEFI boot partition and GRUB reinstall problem](http://ubuntuforums.org/showthread.php?t=2223856&page=3)
+
+<!-- > [Ubuntu 14.04 UEFI boot partition and GRUB reinstall problem](http://ubuntuforums.org/showthread.php?t=2223856&page=3) -->
+<!-- > -->
+> Данный способ изначально для **Ubuntu Linux**, но должен подойти для любого дистрибутива.
 >
-> Оригинальный пост, последняя страница, первый описанный вариант.
+> [Оригинальный пост](http://ubuntuforums.org/showthread.php?t=2223856&page=3), последняя страница, первый описанный вариант.
 
 <!--more-->
 
@@ -95,15 +97,8 @@ sudo mount --bind /proc /mnt/proc
 sudo chroot /mnt
 
 grub-mkconfig -o /boot/grub/grub.cfg
-```
 
-или
-
-```bash
-sudo mount --bind /dev /mnt/dev
-sudo mount --bind /sys /mnt/sys
-sudo mount --bind /proc /mnt/proc
-sudo chroot /mnt
+# или строка выше или строка ниже
 
 update-grub
 ```
