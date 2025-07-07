@@ -167,3 +167,7 @@ Info was taken from https://www.baeldung.com/linux/clone-space-in-use-from-disk
 `rsync -v --bwlimit=5M --partial --progress -e 'ssh -p 10531' debian-work.qcow2 dp@185.51.XX.XX:/mnt/bublick/soft/vm/`
 
 `rsync -avn --delete --progress -e 'ssh -p 10531' ~/Code/ dp@83.243.xx.xxx:~/Code/`
+
+### Резервная копия HDD to HHD по сети
+
+`time ionice -c idle sudo rsync -axHAXSv --delete --info=progress2 /mnt/bublick/ root@192.168.10.20:/mnt/matrix2/`
