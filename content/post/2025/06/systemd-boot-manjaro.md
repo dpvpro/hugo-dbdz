@@ -110,7 +110,7 @@ sudo grub-install --efi-directory=/boot --recheck --debug --bootloader-id=Manjar
 
 Предупреждение это не строгая ошибка, поэтому я не предавал ей значения. Как оказалось очень зря!
 
-Это то почему я не могу загрузиться после восстановления из LiveCD. В параметры ядра записывались данные из параметров ядра LiveCD. В процессе запуска реального хоста применялись не правильные параметры. Загрузка заканчивалась не удачей.
+Это то, почему я не могу загрузиться после восстановления из LiveCD. В параметры ядра записывались данные из параметров ядра LiveCD. В процессе запуска реального хоста применялись не правильные параметры. Загрузка заканчивалась не удачей.
 
 Структуру параметров ядра я смотрел на своём тестовом стенде который уже работал на Arch Linux:
 
@@ -128,7 +128,7 @@ root=UUID=93bda743-9226-4764-9eaa-9478d379f9e8 rw rootflags=subvol=@ quiet
 
 Здесь укажите свои данные. UUID раздела можно посмотреть командой `lsblk -f`
 
-В итоге при генерации в chroot через mkinitcpio нужно все таки использовать `--cmdline` что бы пробросить правильные параметры для ядра.
+Таким образом, при генерации в chroot через mkinitcpio нужно все таки использовать `--cmdline` что бы пробросить правильные параметры для ядра.
 
 #### Проблема с Grub
 
@@ -148,6 +148,8 @@ initrd /initramfs-6.12-x86_64.img
 options root=UUID=93bda743-9226-4764-9eaa-9478d379f9e8 rw rootflags=subvol=@ quiet
 ```
 
+Команды Systemd-boot:
+ 
 ```bash
 sudo bootctl list
 sudo bootctl install
@@ -172,12 +174,12 @@ PRESETS=('default' 'fallback')
 
 #default_config="/etc/mkinitcpio.conf"
 #default_image="/boot/initramfs-linux-lts.img"
-default_uki="/boot/EFI/Linux/arch-linux-lts.efi"
+default_uki="/boot/efi/linux/arch-linux-lts.efi"
 default_options="--splash /usr/share/systemd/bootctl/splash-arch.bmp"
 
 #fallback_config="/etc/mkinitcpio.conf"
 #fallback_image="/boot/initramfs-linux-lts-fallback.img"
-fallback_uki="/boot/EFI/Linux/arch-linux-lts-fallback.efi"
+fallback_uki="/boot/efi/linux/arch-linux-lts-fallback.efi"
 fallback_options="-S autodetect"
 ```
 
