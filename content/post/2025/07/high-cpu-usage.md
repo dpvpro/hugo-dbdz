@@ -5,7 +5,6 @@ lastmod: 2025-07-22
 description: Отладка высокой загрузки процессора.
 draft:  false
 categories:
-  - linux
   - debug
 tags:
   - high cpu usage
