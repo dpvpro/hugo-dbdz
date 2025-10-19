@@ -1,13 +1,14 @@
 ---
 title: Переход с Manjaro на Arch
 date: 2025-06-26
+lastmod: 2025-10-21
 description: Переход с Manjaro на Arch.
-draft:  false
+draft: false
 categories:
-  -  linux
+    - linux
 tags:
-  - migrate from manjaro linux to arch linux
-  - переход с manjaro linux на arch linux
+    - migrate manjaro to arch linux
+    - переход с manjaro на arch linux
 ---
 
 Давно хотел сделать данное действие, что бы наконец-таки сказать **"I use Arch, btw"**. Не буду подробно описывать свои шаги, скажу лишь что в процессе переход использовались две статьи, и я могу подтвердить что с помощью них я удачно осуществил миграцию:
@@ -22,8 +23,16 @@ tags:
 
 #### Список "чужих" пакетов
 
+Родные пакеты - пакеты из репозиториев Arch Linux.
+
 ```bash
-pamac list -m | grep -v AUR | grep -ve "linux|pamac|pacman" | awk '{print $1}' | sed -z 's/\n/ /g'
+yay -Qn
+```
+
+Чужие пакеты - это фактически пакеты из AUR.
+
+```bash
+yay -Qm | grep -v AUR | grep -ve "linux|pamac|pacman" | awk '{print $1}' | sed -z 's/\n/ /g'
 ```
 
 ```bash
@@ -323,11 +332,11 @@ zsh-theme-powerlevel10k
 
 #### Список pacnew конфигов
 
-Список новых конфигурационных файлов, которые добавляет Arch при установке пакетов. Может быть бы разница в конфигурации у Manjaro и Arch. Рекомендуется обратить на это внимание. Но я не стал этого делать.
+Список новых конфигурационных файлов, которые добавляет Arch при установке пакетов. Может быть бы разница в конфигурации у Manjaro и Arch. Рекомендуется обратить на это внимание. Но я не стал этого делать. `fd` утилита замена `find`, гораздо более производительная и удобная - `yay -S fd`.
 
 ```bash
-sudo fd '\.pacnew$' /
-fd .pacnew /
+fd -u -e "pacnew"
+sudo fd -u -e "pacnew" . /
 ```
 
 ```bash
