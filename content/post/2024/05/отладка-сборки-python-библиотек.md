@@ -1,27 +1,49 @@
 ---
 title: Отладка сборки Python библиотек
 date: 2024-05-09T01:55:26+03:00
-lastmod: 2025-05-16
+lastmod: 2026-02-06
 # description: Отладка сборки python библиотеки на Manjaro Linux
 categories:
   - python
   - debug
 tags:
-  - debug python library
+  - debug
   - pytest
+  - ruff
 ---
-При очередном обновлении *Manjaro*, обновлении двух python библиотек `python-jarowinkler` и `python-async_generator` завершилось ошибками.
+При очередном обновлении Manjaro, обновлении двух Python библиотек `python-jarowinkler` и `python-async_generator` завершилось ошибками.
 
 Библиотеку `python-async_generator` я удалил, потому что она выглядела старой и уже не поддерживаемой. На библиотеке `python-jarowinkler` я задержался, так как она выглядела поддерживаемой.
 
-Было интересно понять где проблема: в недавнем переход *Manjaro* на новый выпуск Python 3.12 или проблема кроется где то еще.
+Я использую Manjaro, но пакетная база Arch и Manjaro очень близка. Было интересно понять где проблема: в недавнем переход Arch (Manjaro) на новый выпуск Python 3.12 или проблема кроется где то еще.
 
-<!--more-->
+Итак, при сборке возникала проблема:
 
-Я использую *Manjaro*, но пакетная база *Arch* и *Manjaro* очень близка.
-
-При сборке возникала проблема:
 ```python
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def find_ruff_bin() -> str:
+        """Return the ruff binary path."""
+
+        ruff_exe = "ruff" + sysconfig.get_config_var("EXE")
+
+        path = os.path.join(sysconfig.get_path("scripts"), ruff_exe)
+        if os.path.isfile(path):
+            return path
+
+        if sys.version_info >= (3, 10):
+            user_scheme = sysconfig.get_preferred_scheme("user")
+        elif os.name == "nt":
+            user_scheme = "nt_user"
+        elif sys.platform == "darwin" and sys._framework:
+            user_scheme = "osx_framework_user"
+        else:
+            user_scheme = "posix_user"
+
+        path = os.path.join(sysconfig.get_path("scripts", scheme=user_scheme), ruff_exe)
+        if os.path.isfile(path):
+            return path
+
 >       raise FileNotFoundError(path)
 E       FileNotFoundError: /home/dp/.local/bin/ruff
 
@@ -49,32 +71,12 @@ FAILED tests/test_hypothesis.py::ruff::format - FileNotFoundError: /home/dp/.loc
  -> error making: python-jarowinkler
 ```
 
-Тесты не находили утилиту `ruff` по пути `/home/dp/.local/bin/`. `Ruff` это линтер и инструмент для проверки форматирования кода `python`. 
+Тесты не находили утилиту `ruff` по пути `/home/dp/.local/bin/`. Не понятно было почему брался этот путь, а не общесистемный.
 
-Совершенно не понятно было почему брался этот путь, а не общесистемный.
-
-Я попробовал вручную собрать пакет, воспроизведя шаги из `PKGBUILD`:
-
-`cat /home/dp/.cache/yay/python-jarowinkler/PKGBUILD`
+Попробуем разобраться. Для этого воспроизведем сборку из `PKGBUILD` который располагался по пути `~/.cache/yay/python-jarowinkler/PKGBUILD`:
 
 ```bash
-# Maintainer: Bao Trinh <qubidt@gmail.com>
-# Contributor: Antonio Rojas <arojas@archlinux.org>
-# Contributor: Pekka Ristola <pekkarr [at] protonmail [dot] com>
-
-_name=jarowinkler
-pkgname=python-$_name
-pkgver=2.0.1
-pkgrel=2
-pkgdesc='A library for fast approximate string matching using Jaro and Jaro-Winkler similarity'
-arch=(x86_64)
-url='https://github.com/maxbachmann/JaroWinkler'
-license=(MIT)
-depends=(python python-rapidfuzz)
-makedepends=(python-pip python-build python-installer python-setuptools python-scikit-build ninja)
-checkdepends=(python-hypothesis python-pytest)
-source=("https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
-sha256sums=('7640c79f8d2d5e9eed6691cb49e3018a23b2319daad9a2178df253368b5432b7')
+...
 
 build() {
   cd $_name-$pkgver
@@ -93,25 +95,24 @@ package() {
   cd $_name-$pkgver
   python -m installer --destdir="$pkgdir" dist/*.whl
   install -Dm644 -t "$pkgdir"/usr/share/licenses/$pkgname LICENSE
+}
+
+...
 ```
 
-Для этого переходим в сборочный каталог и начинаем воспроизводить шаги из секций `build()` и `check()`:
-
-`cd /home/dp/.cache/yay/python-jarowinkler/src/jarowinkler-2.0.1`
+Переходим в сборочный каталог `~/.cache/yay/python-jarowinkler/src/jarowinkler-2.0.1` и начинаем вручную воспроизводить шаги из секций `build()` и `check()`.
 
 На шаге `test-env/bin/python -m pytest` проблема воспроизводилась.
 
-Начал смотреть проблемный файл `/usr/lib/python3.12/site-packages/ruff/__main__.py` забивая его отладочными print'ами.
+Начал смотреть проблемный файл `/usr/lib/python3.12/site-packages/ruff/__main__.py` забивая его отладочными print'ами. В выводе все равно фигурировали `/home/dp/.local/bin/`.
 
-В выводе все равно фигурировали `/home/dp/.local/bin/`.
-
-Запустил тесты от системного `python` и тесты прошли (!), а в выводе не было информации из отладочных print'ов.
+Запустил тесты от системного Python и тесты прошли (!), а в выводе не было информации из отладочных print'ов.
 
 ```bash
 python -m pytest tests/test_hypothesis.py
 ```
 
-**_Стало понятно, что где то есть какая то разница, но как её определить?_**
+_Стало понятно что где то есть какая то разница, но как её определить?_
 
 Использовал отладку с добавлением в файл `/usr/lib/python3.12/site-packages/ruff/__main__.py` точек останова:
 
@@ -120,7 +121,7 @@ import pdb
 pdb.set_trace()
 ```
 
-Оттуда было видно что из модуля `sysconfig` приходит разная информация об окружении при запуске общесистемного `python` и из `venv` окружения.
+Оттуда было видно что из модуля `sysconfig` приходит разная информация об окружении при запуске общесистемного Python и из `venv` окружения.
 
 Подробно можно увидеть если запустить следующие команды:
 
@@ -129,11 +130,9 @@ python -m sysconfig | grep script
 test-env/bin/python -m sysconfig | grep script
 ```
 
-Я вспомнил что у меня есть тестовый стенд, и попробовал воспроизвести проблему на нём. При установке пакета `python-jarowinkler` проблем не было.
+Я вспомнил что у меня есть тестовый стенд, и попробовал воспроизвести проблему на нём. При установке пакета `python-jarowinkler` проблем не было. Значит есть разница в системном окружении, понял я.
 
-Очевидно что есть разница в системном окружении.
-
-В итоге было установленно что есть разница в пакетах `ruff`. На проблемной системе были внешние пакеты связанные с `ruff`:
+В результате экспериментов было установлено что есть разница в пакетах `ruff`. "Ruff" это очень быстрый линтер и инструмент для проверки форматирования кода Python. На проблемной системе были внешние пакеты связанные с `ruff`:
 
 ```bash
 > yay -Qs ruff
@@ -145,16 +144,13 @@ local/ruff 0.4.3-1
     An extremely fast Python linter, written in Rust
 ```
 
-Там где проблем с установкой не наблюдалось, этих пакетов не было.
-Проблема решилась после удаления вышеперечисленных пакетов.
+Там где проблем с установкой не наблюдалось, этих пакетов не было. Проблема решилась после удаления вышеперечисленных пакетов и сборка начала проходить.
 
 ```bash
 yay -Rnsu python-pytest-ruff python-ruff ruff
 ```
 
-Сборка начала проходить `yay -S python-jarowinkler`.
-
-Тут я вспомнил про первый проблемный пакет - `python-async_generator`. Скорее всего с ним такая же история.
+Я вспомнил про первый проблемный пакет - `python-async_generator`. Скорее всего с ним такая же история.
 
 При сборке данного пакета возникала следующая ошибка:
 
