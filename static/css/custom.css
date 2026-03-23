@@ -1,10 +1,3 @@
-/* body>nav form {
-    width: 215px;
-    padding-top: .2em;
-}
- */
-
-
 /* Увеличенный размер поля поиска */
 body>nav form .search {
     height: 18px;
@@ -12,40 +5,22 @@ body>nav form .search {
     padding: 8px 10px;
 }
 
-
-/* @media only screen and (min-width: 550px) {
-    body>nav form .search {
-        margin-top: 0.24em;
-    }
-} */
-
+/* RSS icon alignment */
+body>nav ul.subscription a {
+    padding-top: 1px;
+}
 
 @media only screen and (min-width: 550px) {
     body>nav ul {
         padding-top: .04em;
     }
 }
-
-
-/* @media only screen and (min-width: 550px) {
-    body>nav ul {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        overflow: hidden;
-        ## float: left;
-        display: block;
-        padding-top: .04em;
-    }
-} */
-
 
 @media only screen and (min-width: 550px) {
     body>nav form {
         padding-top: .08em;
     }
 }
-
 
 @media only screen and (min-width: 768px) {
     article header {
@@ -54,19 +29,11 @@ body>nav form .search {
     }
 }
 
-
 @media only screen and (min-width: 992px) {
     body>nav form {
         width: 240px;
     }
 }
-
-/* decrease heading article h1 on mobile
-@media only screen and (max-width: 550px) {
-    #content .blog-index article h1 {
-        font-size: 1.6em;
-    }
-} */
 
 .flex-content,
 article img,
