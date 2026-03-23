@@ -5,10 +5,11 @@
  */
 
 
- body>nav form .search {
-    padding: unset;
-    padding-left: 6px;
-    height: 26px;
+/* Увеличенный размер поля поиска */
+body>nav form .search {
+    height: 18px;
+    font-size: 18px;
+    padding: 8px 10px;
 }
 
 
@@ -32,7 +33,7 @@
         padding: 0;
         border: 0;
         overflow: hidden;
-        ## float: left; 
+        ## float: left;
         display: block;
         padding-top: .04em;
     }
@@ -56,12 +57,11 @@
 
 @media only screen and (min-width: 992px) {
     body>nav form {
-        width: 215px;
-        padding-top: .14em;
+        width: 240px;
     }
 }
 
-/* decrease heading article h1 on mobile 
+/* decrease heading article h1 on mobile
 @media only screen and (max-width: 550px) {
     #content .blog-index article h1 {
         font-size: 1.6em;
