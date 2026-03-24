@@ -14,7 +14,7 @@ tags:
 ---
 Markdown image:
 
-![](/images/windows.png)
+![](/images/test/windows.png)
 
 More stuff after image.
 
