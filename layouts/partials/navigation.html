@@ -1,7 +1,7 @@
 <!-- mobile navigation -->
 <fieldset class="mobile-nav">
   <!-- apart from Disqus and analytics, this is the only place where we need JavaScript -->
-  <select onchange="location = this.value;">
+  <select onchange="location = this.value;" name="nav_select">
     <option value="">Навигация…</option>
       {{ range .Site.Menus.main }}
         <option value="{{ .URL | absURL }}">» {{ .Name }}</option>
@@ -21,6 +21,15 @@
   {{ end }}
 </ul>
 
+{{ with .Site.Params.searchEngineURL }}
+  <form action="{{ . }}" method="get" target="_blank" rel="noopener noreferrer">
+      <fieldset role="search">
+          <input class="search" type="text" name="q" autocomplete="off" placeholder="Поиск"/>
+          <input type="hidden" name="sitesearch" value="{{ "/" | absURL }}" />
+      </fieldset>
+  </form>
+{{end}}
+
 <ul class="subscription">
   {{ if or .Site.Params.rss .Site.Params.textrss }}
     {{ if .Site.Params.rss }}
@@ -30,12 +39,3 @@
     {{ end }}
   {{ end }}
 </ul>
-
-{{ with .Site.Params.searchEngineURL }}
-  <form action="{{ . }}" method="get" target="_blank" rel="noopener noreferrer">
-    <fieldset role="search">
-      <input class="search" type="text" name="q" autocomplete="off" placeholder="Поиск"/>
-      <input type="hidden" name="sitesearch" value="{{ "/" | absURL }}" />
-    </fieldset>
-  </form>
-{{end}}

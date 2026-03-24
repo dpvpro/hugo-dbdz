@@ -19,12 +19,12 @@ post = "/entry/:year-:month-:day-:slug/"
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
-  [markup.goldmark] 
+  [markup.goldmark]
     [markup.goldmark.renderer]
       hardWraps = false
       unsafe = true
       xhtml = false
-    
+
   # Default is startLevel 2 and endLevel 3, we want to render every heading
   [markup.tableOfContents]
     endLevel = 8

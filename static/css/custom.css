@@ -1,15 +1,16 @@
 /* Увеличенный размер поля поиска */
 body>nav form .search {
-    height: 35px;
-    font-size: 18px;
+    height: 34px;
     padding: unset;
     width: 100%;
+    padding: unset;
+    font-size: unset;
+    font-family: unset;
+    box-shadow: unset;
 }
 
-/* Мобильная навигация - высота на 6px больше поиска */
-body>nav fieldset.mobile-nav select {
-    height: 36px;
-    border-radius: 0.5em;
+body>nav fieldset.mobile-nav {
+    width: 100%;
 }
 
 /* RSS icon alignment */
@@ -17,6 +18,61 @@ body>nav ul.subscription a {
     padding-top: 2px;
 }
 
+/* Единый стиль для мобильной навигации и поиска */
+body>nav fieldset.mobile-nav select,
+body>nav form .search {
+    height: 32px;
+    font-size: 18px;
+    font-family: var(--font-sans);
+    border-radius: 0.5em;
+    border: 1px solid #b3b3b3;
+    background-color: var(--color-bg-body);
+    color: #888;
+    box-shadow: #d1d1d1 0 1px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Focus стили для обоих элементов */
+body>nav fieldset.mobile-nav select:focus,
+body>nav form .search:focus {
+    color: var(--color-text-light);
+    border-color: #80b1df;
+    box-shadow: #80b1df 0 0 4px, #80b1df 0 0 3px inset;
+    background-color: #fff;
+    outline: none;
+}
+
+body>nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto auto;
+}
+
+/* Центрирование формы поиска справа */
+body>nav form {
+    justify-self: end;
+}
+
+/* Мобильная версия - 2 колонки: навигация и поиск */
+@media only screen and (max-width: 550px) {
+    body>nav {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    /* Скрыть ненужные элементы */
+    body>nav ul.main-navigation,
+    body>nav ul.subscription {
+        display: none;
+    }
+
+    /* Элементы на всю ширину колонки */
+    body>nav fieldset.mobile-nav,
+    body>nav form {
+        width: 100%;
+    }
+}
 
 /*@media only screen and (min-width: 480px) {
     body>header, body>nav, body>footer, body #content>article,
@@ -28,12 +84,9 @@ body>nav ul.subscription a {
 
 @media only screen and (min-width: 550px) {
     body>nav ul {
-        padding-top: .04em;
+        padding-top: 0em;
     }
 
-    body>nav form {
-        padding-top: .08em;
-    }
 }
 
 @media only screen and (min-width: 768px) {
