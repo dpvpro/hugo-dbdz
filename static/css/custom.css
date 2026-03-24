@@ -1,14 +1,30 @@
 /* Увеличенный размер поля поиска */
 body>nav form .search {
-    height: 18px;
+    height: 35px;
     font-size: 18px;
-    padding: 8px 10px;
+    padding: unset;
+    width: 100%;
+}
+
+/* Мобильная навигация - высота на 6px больше поиска */
+body>nav fieldset.mobile-nav select {
+    height: 36px;
+    border-radius: 0.5em;
 }
 
 /* RSS icon alignment */
 body>nav ul.subscription a {
-    padding-top: 1px;
+    padding-top: 2px;
 }
+
+
+/*@media only screen and (min-width: 480px) {
+    body>header, body>nav, body>footer, body #content>article,
+    body #content>div>article, body #content>div>section {
+        padding-left: 25px;
+        padding-right: unset;
+    }
+}*/
 
 @media only screen and (min-width: 550px) {
     body>nav ul {
