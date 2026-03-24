@@ -22,7 +22,7 @@ body>nav ul.subscription a {
 body>nav fieldset.mobile-nav select,
 body>nav form .search {
     height: 32px;
-    font-size: 18px;
+    font-size: 21px;
     font-family: var(--font-sans);
     border-radius: 0.5em;
     border: 1px solid #b3b3b3;
@@ -52,10 +52,11 @@ body>nav {
 /* Центрирование формы поиска справа */
 body>nav form {
     justify-self: end;
+    padding-left: 20px;
 }
 
-/* Мобильная версия - 2 колонки: навигация и поиск */
-@media only screen and (max-width: 550px) {
+/* Мобильная версия - 2 колонки: навигация и поиск (до 900px) */
+@media only screen and (max-width: 900px) {
     body>nav {
         grid-template-columns: 1fr 1fr;
         justify-items: center;
@@ -71,6 +72,14 @@ body>nav form {
     body>nav fieldset.mobile-nav,
     body>nav form {
         width: 100%;
+    }
+}
+
+/* Desktop версия - показывать обычную навигацию (от 901px) */
+@media only screen and (min-width: 901px) {
+    /* Скрыть мобильную навигацию */
+    body>nav fieldset.mobile-nav {
+        display: none;
     }
 }
 
