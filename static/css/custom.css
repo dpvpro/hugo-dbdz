@@ -23,6 +23,7 @@ body>nav fieldset.mobile-nav select,
 body>nav form .search {
     height: 32px;
     font-size: 21px;
+    padding-left: 10px;
     font-family: var(--font-sans);
     border-radius: 0.5em;
     border: 1px solid #b3b3b3;
