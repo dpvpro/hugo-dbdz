@@ -6,6 +6,12 @@
   <!-- added from octo -->
   <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 
+  {{ if not .Site.Params.fontAwesome }}
+    <link rel="stylesheet" href='{{ absURL "css/fork-awesome.min.css" }}'>
+  {{ else }}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  {{ end }}
+
   {{ if not .Site.Params.disableGoogleFonts }}
     <!-- if local Google fonts are enabled -->
     {{ if not .Site.Params.remoteFonts }}
@@ -26,12 +32,6 @@
   <!-- css overrides -->
   {{ range .Site.Params.customCSS }}
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
-  {{ end }}
-
-  {{ if not .Site.Params.fontAwesome }}
-    <link rel="stylesheet" href='{{ absURL "css/fork-awesome.min.css" }}'>
-  {{ else }}
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   {{ end }}
 
   <!-- favicon -->

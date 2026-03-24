@@ -24,7 +24,7 @@
 {{ with .Site.Params.searchEngineURL }}
   <form action="{{ . }}" method="get" target="_blank" rel="noopener noreferrer">
       <fieldset role="search">
-          <input class="search" type="text" name="q" autocomplete="off" placeholder="Поиск"/>
+          <input class="search" type="text" name="q" autocomplete="off" placeholder="Поиск..."/>
           <input type="hidden" name="sitesearch" value="{{ "/" | absURL }}" />
       </fieldset>
   </form>
