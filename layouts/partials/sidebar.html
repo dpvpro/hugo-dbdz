@@ -1,40 +1,4 @@
-<!-- To modify sidebar width check the css file lines 757 and 765 (for large screens) -->
-
 <aside class="sidebar thirds">
-  <section class="first odd">
-
-    {{ with .Site.Params.sidebarHeader }}
-      <h1>{{ . | markdownify }}</h1>
-    {{ end }}
-
-    <p>
-      {{ with .Site.Params.sidebarText }}
-        {{ . | markdownify }}
-      {{ end }}
-    </p>
-  </section>
-
-  <!-- Social media icons are moved to social.html -->
-  {{ partial "social.html" . }}
-
-  <!-- Sidebar menu - items are read from the config file
-       first we check if it is enabled in config file and then start adding items.
-       if Site.Params.sidebarNewWindow exists and is set to true then open these links in a new window -->
-
-  {{ with .Site.Params.sidebarMenuEnabled }}
-    {{ if eq . true }}
-      <section class="odd">
-        {{ with $.Site.Params.sidebarMenuHeader }}
-          <h1>{{ . }}</h1>
-        {{ end }}
-        {{ range $.Site.Menus.sidebar }}
-          <li>
-            <a href="{{ .URL | absURL }}" title="{{ .Name }}" {{ if eq $.Site.Params.sidebarNewWindow true }} target="_blank" rel="noopener noreferrer" {{ end }}>{{ .Name }}</a>
-          </li>
-        {{ end }}
-      </section>
-    {{ end }}
-  {{ end }}
 
   <!-- Add recent posts - limit is .Site.Params.sidebarRecentLimit - example copied from https://gohugo.io/templates/go-templates/ -->
   <!-- Only display this section if sideBarRecentLimit is not zero -->
@@ -56,12 +20,47 @@
     {{ end }}
   {{ end }}
 
+  <!-- Sidebar menu - items are read from the config file
+       first we check if it is enabled in config file and then start adding items.
+       if Site.Params.sidebarNewWindow exists and is set to true then open these links in a new window -->
+
+  {{ with .Site.Params.sidebarMenuEnabled }}
+    {{ if eq . true }}
+      <section class="odd">
+        {{ with $.Site.Params.sidebarMenuHeader }}
+          <h1>{{ . }}</h1>
+        {{ end }}
+        {{ range $.Site.Menus.sidebar }}
+          <li>
+            <a href="{{ .URL | absURL }}" title="{{ .Name }}" {{ if eq $.Site.Params.sidebarNewWindow true }} target="_blank" rel="noopener noreferrer" {{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </section>
+    {{ end }}
+  {{ end }}
+
+  <section class="first odd">
+
+    {{ with .Site.Params.sidebarHeader }}
+      <h1>{{ . | markdownify }}</h1>
+    {{ end }}
+
+    <p>
+      {{ with .Site.Params.sidebarText }}
+        {{ . | markdownify }}
+      {{ end }}
+    </p>
+  </section>
+
+  <!-- Social media icons are moved to social.html -->
+  {{ partial "social.html" . }}
+
   <!-- Yandex.Metrika informer -->
   <a href="https://metrika.yandex.ru/stat/?id=30491722&amp;from=informer"
   target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/30491722/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
   style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="30491722" data-lang="ru" /></a>
   <!-- /Yandex.Metrika informer -->
-  
+
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -69,7 +68,7 @@
      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-  
+
      ym(30491722, "init", {
           clickmap:true,
           trackLinks:true,
@@ -78,6 +77,6 @@
      });
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/30491722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->   
+  <!-- /Yandex.Metrika counter -->
 
 </aside>
