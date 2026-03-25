@@ -1,6 +1,7 @@
 ---
 title: "Ошибка при обновлении Ubuntu Server 14.04"
 date: "2015-09-28"
+lastmod: 2026-03-26
 categories:
   - "linux"
 tags:
@@ -9,7 +10,9 @@ tags:
 
 Столкнулся с тем, что при обновлении Ubuntu Server 14.04 возникает ошибка:
 
-`gzip: stdout: No space left on device E: mkinitramfs failure cpio 141 gzip 1`
+```txt
+gzip: stdout: No space left on device E: mkinitramfs failure cpio 141 gzip 1
+```
 
 <!--more-->
 
@@ -21,15 +24,21 @@ tags:
 
 Решением было удалить лишние ядра:
 
-`sudo apt-get autoremove`
+```bash
+sudo apt-get autoremove
+```
 
 Или же в ручном режиме:
 
-`dpkg -l 'linux-image-*' | grep '^ii'`
+```bash
+dpkg -l 'linux-image-*' | grep '^ii'
+```
 
 и далее удаляем какое либо не нужное ядро:
 
-`sudo dpkg --remove linux-image-extra-3.19.0-28-generic`
+```bash
+sudo dpkg --remove linux-image-extra-3.19.0-28-generic
+```
 
 Листинг процесса ошибки в консоли выглядел так:
 
