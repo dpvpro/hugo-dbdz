@@ -2,3 +2,5 @@
 public/
 themes/
 .hugo_build.lock
+googleba*.html
+yandex*.html
