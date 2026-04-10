@@ -52,15 +52,11 @@ sidebarHeader = "Контакты"
 # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
 sidebarText = """
 
-Гуглопочта -greeen_grass_at_home
+Gmail - greeen_grass_at_home
 
-Телеграмм - [greeen_grass_at_home](https://t.me/greeen_grass_at_home)
+TeleG - [greeen_grass_at_home](https://t.me/greeen_grass_at_home)
 
 Github - [dpvpro](https://github.com/dpvpro)
-
-Google - [google.com](https://www.google.com)
-
-Yandex - [yandex.ru](https://ya.ru)
 
 """
 
