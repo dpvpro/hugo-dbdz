@@ -23,13 +23,13 @@
        For more info about template variables: https://gohugo.io/templates/variables/
   -->
 
-  <p class="meta"> Предыдущее:
+  <p class="meta"> Следующее:
     {{ with .NextInSection }}
       <a class="basic-alignment" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
     {{ end }}
   </p>
 
-  <p class="meta"> Следующее:
+  <p class="meta"> Предыдущее:
     {{ with .PrevInSection }}
         <a class="basic-alignment" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
     {{ end }}
