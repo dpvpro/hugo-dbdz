@@ -45,20 +45,20 @@ post = "/entry/:year-:month-:day-:slug/"
 sidebarRecentLimit = 5
 
 # Sidebar header - passed to markdownify so you can write markdown here
-sidebarHeader = "Контакты"
+# sidebarHeader = "Контакты"
 
 # Sidebar text also supports markdown
 # New lines can be added with two spaces at the end of line. New paragraphs can be added with two an empty line.
 # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
-sidebarText = """
+# sidebarText = """
 
-Gmail - greeen_grass_at_home
+# Gmail - greeen.grass.at.home
 
-TeleG - [greeen_grass_at_home](https://t.me/greeen_grass_at_home)
+# TeleG - [greeen_grass_at_home](https://t.me/greeen_grass_at_home)
 
-Github - [dpvpro](https://github.com/dpvpro)
+# Github - [dpvpro](https://github.com/dpvpro)
 
-"""
+# """
 
 # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
 sidebarMenuEnabled = true
@@ -211,15 +211,14 @@ URL = "/sample/"
 weight = 3
 
 [[menus.main]]
-Name = "Резюме"
-URL = "/resume/"
-weight = 5
-
-[[menus.main]]
 Name = "Обо мне"
 URL = "/about/"
 weight = 4
 
+# [[menus.main]]
+# Name = "Резюме"
+# URL = "/resume/"
+# weight = 5
 
 # Sidebar menus
 # Enable with "sidebarMenuEnabled = true" under [params]

@@ -8,3 +8,5 @@ date = 2023-12-05T07:54:48+03:00
 
 
 ![](/images/Dennis_2019.jpg)
+
+Telegram - [greeen_grass_at_home](https://t.me/greeen_grass_at_home) | Github - [dpvpro](https://github.com/dpvpro) | Gmail - greeen.grass.at.home
