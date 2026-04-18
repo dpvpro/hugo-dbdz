@@ -1,7 +1,8 @@
 ---
 title: "Недоступен открытый ключ для ПО в Ubuntu"
-date: "2016-06-26"
-categories: 
+date: 2016-06-26
+lastmod: 2026-04-18
+categories:
   - "linux"
 ---
 <!--more-->
@@ -14,4 +15,10 @@ W: Ошибка GPG: http://apt.nylas.com trusty InRelease:
 NO_PUBKEY 38FC6E967D0ACF4A
 ```
 
-Решение данной проблемы - [Cannot solve GPG error](http://askubuntu.com/questions/511736/cannot-solve-gpg-error)
+Устанавливаем необходимые ключи:
+
+```bash
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 38FC6E967D0ACF4A
+```
+
+Источник - [Cannot solve GPG error](http://askubuntu.com/questions/511736/cannot-solve-gpg-error)
