@@ -35,6 +35,9 @@ yay -Qn
 yay -Qm | grep -v AUR | grep -ve "linux|pamac|pacman" | awk '{print $1}' | sed -z 's/\n/ /g'
 ```
 
+<details>
+<summary>📋 Нажмите чтобы раскрыть список пакетов (спойлер)</summary>
+
 ```bash
 acpilight
 adapta-maia-theme
@@ -330,6 +333,8 @@ zoom
 zsh-theme-powerlevel10k
 ```
 
+</details>
+
 #### Список pacnew конфигов
 
 Список новых конфигурационных файлов, которые добавляет Arch при установке пакетов. Может быть бы разница в конфигурации у Manjaro и Arch. Рекомендуется обратить на это внимание. Но я не стал этого делать. `fd` утилита замена `find`, гораздо более производительная и удобная - `yay -S fd`.
@@ -338,6 +343,9 @@ zsh-theme-powerlevel10k
 fd -u -e "pacnew"
 sudo fd -u -e "pacnew" . /
 ```
+
+<details>
+<summary>📋 Нажмите чтобы раскрыть список файлов (спойлер)</summary>
 
 ```bash
 /etc/exports.pacnew
@@ -385,3 +393,5 @@ sudo fd -u -e "pacnew" . /
 /etc/fonts/fonts.conf.pacnew
 /etc/default/grub.pacnew
 ```
+
+</details>
