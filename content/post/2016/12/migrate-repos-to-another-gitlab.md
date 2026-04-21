@@ -1,6 +1,7 @@
 ---
 title: "Миграция репозиториев Gitlab на другой сервер"
-date: "2016-12-22"
+date: 2016-12-22
+lastmod: 2026-07-21
 categories:
   - "devops"
 tags:
@@ -9,13 +10,7 @@ tags:
 
 <!--more-->
 
-Задача: перенести репозитории **Gitlab** на другой сервер. Данная задача решена в полуавтоматическом режиме.
-Требуется вручную создавать репозиторий на новом **Gitlab**.
-
-**Update 04.01.2017**
-
-Сейчас я знаю как это можно решить в автоматическом режиме, но не буду дописывать, потому что это можно доработать самостоятельно.
-Требуется всего лишь дописать строку создающую репозиторий на новом сервере.
+Необходимо перенести репозитории *Gitlab* на другой сервер.
 
 ```bash
 #!/bin/bash
@@ -31,17 +26,17 @@ REPO_OLD=${REPO_NEW}.git
 
 cd $DIRECTORY
 
-echo -e "Clone from old server\n"
+echo "Clone from old server"
 git clone --mirror git@gitlab:apsh/$REPO_OLD
 
-# Create a blank repo on the new gitlab manualy with name $REPO_NEW
-# Add the new repo as a remote on the dev machine.
 cd $REPO_OLD
-git remote add master ssh://git@XX.XX.XX.XX:2001/apsh/$REPO_NEW
+# create new repo on new gitlab server
+# repo will be private by default
+git push --set-upstream ssh://git@XX.XX.XX.XX:2001/apsh/$REPO_NEW newserver
+git remote add newserver ssh://git@XX.XX.XX.XX:2001/apsh/$REPO_NEW
 
-echo -e "\nPush in new server\n"
+echo "Push in new server"
 
-# Push everything back to the new repo.
-git push --mirror master
-
+# push everything back to the new repo.
+git push --mirror newserver
 ```
