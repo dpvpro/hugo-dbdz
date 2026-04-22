@@ -29,13 +29,12 @@ cd $DIRECTORY
 echo "Clone from old server"
 git clone --mirror git@gitlab:apsh/$REPO_OLD
 
-# Create a blank repo on the new gitlab manualy with name $REPO_NEW
-# Add the new repo as a remote on the dev machine.
 cd $REPO_OLD
+# add new origin
 git remote add newserver ssh://git@XX.XX.XX.XX:2001/apsh/$REPO_NEW
 
-echo -"Push in new server"
+echo "Push in new server"
 
-# Push everything back to the new repo.
+# push everything back to the new repo.
 git push --mirror newserver
 ```
