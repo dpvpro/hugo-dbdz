@@ -1,5 +1,5 @@
 ---
-title: "Экранирование симоволов в Groovy (Jenkins pipeline)"
+title: "Экранирование символов в Groovy (Jenkins pipeline)"
 date: "2020-06-15"
 categories:
   - "devops"
