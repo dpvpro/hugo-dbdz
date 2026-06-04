@@ -1,6 +1,7 @@
 ---
 title: Восстановление Grub на компьютере с Linux, UEFI, GPT
 date: 2016-06-11
+lastmod: 2026-06-04
 description: Восстановление Grub на компьютере с Linux, UEFI, GPT
 categories:
   - linux
@@ -26,8 +27,6 @@ tags:
 <!-- > [Ubuntu 14.04 UEFI boot partition and GRUB reinstall problem](http://ubuntuforums.org/showthread.php?t=2223856&page=3) -->
 <!-- > -->
 > Данный способ изначально для **Ubuntu Linux**, но должен подойти для любого дистрибутива.
->
-> [Оригинальный пост](http://ubuntuforums.org/showthread.php?t=2223856&page=3), последняя страница, первый описанный вариант.
 
 <!--more-->
 
@@ -102,3 +101,5 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 update-grub
 ```
+
+Можно перезагрузиться. Загрузчик должен быть восстановлен.
