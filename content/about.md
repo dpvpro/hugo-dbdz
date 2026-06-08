@@ -8,12 +8,8 @@ date = 2023-12-05T07:54:48+03:00
 
 ![](/images/denis_2019.jpg)
 
-*Мои контакты:*
+*Контакты:*
 
-*Telegram - [greeen_grass_at_home](https://t.me/greeen_grass_at_home)*
+*Telegram, Gmail - [dpvpro](https://t.me/dpvpro)*
 
-*Gmail - greeen.grass.at.home*
-
-*Мой код на Github:*
-
-*[https://github.com/dpvpro](https://github.com/dpvpro)*
+*Github: [https://github.com/dpvpro](https://github.com/dpvpro)*
